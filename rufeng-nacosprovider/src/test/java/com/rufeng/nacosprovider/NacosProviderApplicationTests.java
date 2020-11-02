@@ -8,6 +8,7 @@ class NacosProviderApplicationTests {
 
     @Test
     void contextLoads() {
+        System.out.println("");
     }
 
 }
