@@ -7,46 +7,37 @@
     <groupId>com.rufeng</groupId>
     <artifactId>Microservices</artifactId>
     <packaging>pom</packaging>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0.0</version>
 
-    <modules>
-        <module>rufeng-gateway</module>
-        <module>rufeng-common</module>
-        <module>rufeng-auth</module>
-    </modules>
-
-    <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.3.4.RELEASE</version>
-        <relativePath/> <!-- lookup parent from repository -->
-    </parent>
 
 
     <properties>
+        <rufeng.version>1.0.0</rufeng.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
+        <spring-boot.version>2.3.4.RELEASE</spring-boot.version>
         <spring-cloud.version>Hoxton.SR8</spring-cloud.version>
-        <nacos-discovery.version>2.2.0.RELEASE</nacos-discovery.version>
         <spring-cloud-alibaba.version>2.2.3.RELEASE</spring-cloud-alibaba.version>
         <spring-boot-admin.version>2.3.0</spring-boot-admin.version>
+        <mybatis-plus.version>3.1.0</mybatis-plus.version>
+        <swagger.fox.version>2.9.2</swagger.fox.version>
+        <swagger.core.version>1.5.24</swagger.core.version>
+        <kaptcha.version>2.3.2</kaptcha.version>
+        <pagehelper.boot.version>1.3.0</pagehelper.boot.version>
+        <commons.io.version>2.5</commons.io.version>
+        <commons.fileupload.version>1.3.3</commons.fileupload.version>
+        <velocity.version>1.7</velocity.version>
+        <fastjson.version>1.2.74</fastjson.version>
+        <poi.version>3.17</poi.version>
+        <common-pool.version>2.6.2</common-pool.version>
     </properties>
 
-    <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-logging</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
-
-    </dependencies>
-
-
+    <!-- 依赖声明 -->
     <dependencyManagement>
         <dependencies>
+
+            <!-- SpringCloud 微服务 -->
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
@@ -54,6 +45,7 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+
             <!-- SpringCloud Alibaba 微服务 -->
             <dependency>
                 <groupId>com.alibaba.cloud</groupId>
@@ -62,6 +54,16 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+
+            <!-- SpringBoot 依赖配置 -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
             <!--  SpringBoot 监控客户端 -->
             <dependency>
                 <groupId>de.codecentric</groupId>
@@ -69,15 +71,118 @@
                 <version>${spring-boot-admin.version}</version>
             </dependency>
 
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatis-plus.version}</version>
+            </dependency>
+
+            <!-- Swagger 依赖配置 -->
+            <dependency>
+                <groupId>io.swagger</groupId>
+                <artifactId>swagger-models</artifactId>
+                <version>${swagger.core.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.swagger</groupId>
+                <artifactId>swagger-annotations</artifactId>
+                <version>${swagger.core.version}</version>
+            </dependency>
+
+            <!-- 验证码 -->
+            <dependency>
+                <groupId>com.github.penggle</groupId>
+                <artifactId>kaptcha</artifactId>
+                <version>${kaptcha.version}</version>
+            </dependency>
+
+            <!-- io常用工具类 -->
+            <dependency>
+                <groupId>commons-io</groupId>
+                <artifactId>commons-io</artifactId>
+                <version>${commons.io.version}</version>
+            </dependency>
+
+            <!-- excel工具 -->
+            <dependency>
+                <groupId>org.apache.poi</groupId>
+                <artifactId>poi-ooxml</artifactId>
+                <version>${poi.version}</version>
+            </dependency>
+
+            <!-- 文件上传工具类 -->
+            <dependency>
+                <groupId>commons-fileupload</groupId>
+                <artifactId>commons-fileupload</artifactId>
+                <version>${commons.fileupload.version}</version>
+            </dependency>
+
+            <!-- 代码生成使用模板 -->
+            <dependency>
+                <groupId>org.apache.velocity</groupId>
+                <artifactId>velocity</artifactId>
+                <version>${velocity.version}</version>
+            </dependency>
+
+            <!-- JSON 解析器和生成器 -->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson.version}</version>
+            </dependency>
+
+            <!-- 公共资源池 -->
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-pool2</artifactId>
+                <version>${common-pool.version}</version>
+            </dependency>
+
+            <!-- 核心模块 -->
+            <dependency>
+                <groupId>com.rufeng</groupId>
+                <artifactId>rufeng-common-core</artifactId>
+                <version>${rufeng.version}</version>
+            </dependency>
+
+            <!-- 安全模块 -->
+            <dependency>
+                <groupId>com.rufeng</groupId>
+                <artifactId>rufeng-common-security</artifactId>
+                <version>${rufeng.version}</version>
+            </dependency>
+            <!-- 日志记录 -->
+            <dependency>
+                <groupId>com.rufeng</groupId>
+                <artifactId>rufeng-common-log</artifactId>
+                <version>${rufeng.version}</version>
+            </dependency>
+
+            <!-- 缓存服务 -->
+            <dependency>
+                <groupId>com.rufeng</groupId>
+                <artifactId>rufeng-common-redis</artifactId>
+                <version>${rufeng.version}</version>
+            </dependency>
+            <!-- 系统接口 -->
+            <dependency>
+                <groupId>com.rufeng</groupId>
+                <artifactId>rufeng-api-system</artifactId>
+                <version>${rufeng.version}</version>
+            </dependency>
+            <!-- 系统模块 -->
+            <dependency>
+                <groupId>com.rufeng</groupId>
+                <artifactId>rufeng-api-system</artifactId>
+                <version>${rufeng.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>
+    <modules>
+        <module>rufeng-gateway</module>
+        <module>rufeng-common</module>
+        <module>rufeng-auth</module>
+        <module>rufeng-api</module>
+        <module>rufeng-modules</module>
+    </modules>
 </project>
