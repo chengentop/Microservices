@@ -3,7 +3,7 @@ package com.rufeng.system.api;
 import com.rufeng.system.api.domain.SysOperLog;
 import com.rufeng.system.api.factory.RemoteLogFallbackFactory;
 import com.rufeng.common.core.constant.ServiceNameConstants;
-import com.rufeng.common.core.domain.R;
+import com.rufeng.common.core.web.domain.R;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.*;
 

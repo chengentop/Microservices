@@ -4,6 +4,7 @@ import com.rufeng.common.core.constant.Constants;
 import com.rufeng.common.core.constant.HttpStatus;
 import com.rufeng.common.core.utils.DateUtils;
 import com.rufeng.common.core.web.IDataReturnAble;
+import org.apache.poi.ss.formula.functions.T;
 
 import java.io.Serializable;
 import java.text.SimpleDateFormat;
@@ -21,7 +22,7 @@ public class ResultData implements Serializable, IDataReturnAble {
     private int code; //返回码
     private String msg; //返回描述
     private String time;//服务器响应时间
-    private Map<String, Object> data = new HashMap<String, Object>(); //返回数据，如果返回异常则为空Map
+    private Object data; //返回数据，如果返回异常则为空
 
     /**
      * 推荐使用初始化方法构造结果
@@ -29,7 +30,8 @@ public class ResultData implements Serializable, IDataReturnAble {
      * @return
      */
     public static ResultData init() {
-        return new ResultData(HttpStatus.SUCCESS, Constants.SUCCESS_REASON, new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date()));
+        return new ResultData(HttpStatus.SUCCESS, Constants.SUCCESS_REASON, new SimpleDateFormat("yyyy-MM-dd " +
+                "HH:mm:ss").format(new Date()));
     }
 
     public ResultData(int code) {
@@ -54,15 +56,11 @@ public class ResultData implements Serializable, IDataReturnAble {
         return sb.toString();
     }
 
-    public void setData(Map<String, Object> data) {
-        this.data.putAll(data);
+    public void setData(Object data) {
+        this.data = data;
     }
 
-    public void setData(String key, Object value) {
-        this.data.put(key, value);
-    }
-
-    public Map<String, Object> getData() {
+    public Object getData() {
         return data;
     }
 
@@ -90,4 +88,6 @@ public class ResultData implements Serializable, IDataReturnAble {
     public void setTime(String time) {
         this.time = time;
     }
+
+
 }

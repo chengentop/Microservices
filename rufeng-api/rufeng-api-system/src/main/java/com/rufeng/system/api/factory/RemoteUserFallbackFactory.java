@@ -1,6 +1,6 @@
 package com.rufeng.system.api.factory;
 
-import com.rufeng.common.core.domain.R;
+import com.rufeng.common.core.web.domain.R;
 import com.rufeng.system.api.RemoteUserService;
 import com.rufeng.system.api.model.LoginUser;
 import feign.hystrix.FallbackFactory;

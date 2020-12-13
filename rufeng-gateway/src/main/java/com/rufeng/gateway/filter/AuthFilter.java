@@ -4,7 +4,7 @@ import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.rufeng.common.core.constant.CacheConstants;
 import com.rufeng.common.core.constant.Constants;
-import com.rufeng.common.core.domain.R;
+import com.rufeng.common.core.web.domain.R;
 import com.rufeng.common.core.utils.StringUtils;
 import com.rufeng.common.redis.service.RedisService;
 import com.rufeng.gateway.config.properties.WhiteListProperties;

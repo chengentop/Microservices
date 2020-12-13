@@ -1,8 +1,7 @@
 package com.rufeng.auth.service;
 
 import com.rufeng.common.core.constant.Constants;
-import com.rufeng.common.core.constant.UserConstants;
-import com.rufeng.common.core.domain.R;
+import com.rufeng.common.core.web.domain.R;
 import com.rufeng.common.core.enums.UserStatus;
 import com.rufeng.common.core.exception.BaseException;
 import com.rufeng.common.core.utils.StringUtils;

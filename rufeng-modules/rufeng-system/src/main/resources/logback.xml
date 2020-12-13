@@ -20,7 +20,7 @@
 	<logger name="org.springframework" level="WARN"/>
     <logger name="org.mybatis.spring" level="WARN"/>
     <logger name="org.apache" level="WARN"/>
-    <logger name="com.rufeng" level="info"/>
+    <logger name="com.rufeng" level="debug"/>
 	
 	<root level="TRACE">logback.xml
 		<appender-ref ref="STDOUT" />

@@ -1,4 +1,4 @@
-package com.rufeng.common.core.domain;
+package com.rufeng.common.core.web.domain;
 
 
 import com.rufeng.common.core.constant.Constants;
