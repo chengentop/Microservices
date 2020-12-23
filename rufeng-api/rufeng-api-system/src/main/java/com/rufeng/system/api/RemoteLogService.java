@@ -32,7 +32,7 @@ public interface RemoteLogService
      * @param message 消息
      * @return 结果
      */
-    @RequestMapping(value = "/logininfor",method = RequestMethod.POST)
+    @RequestMapping(value = "/logininfor/save",method = RequestMethod.POST)
     R<Boolean> saveLogininfor(@RequestParam("username") String username, @RequestParam("status") String status,
                               @RequestParam("message") String message);
 }
