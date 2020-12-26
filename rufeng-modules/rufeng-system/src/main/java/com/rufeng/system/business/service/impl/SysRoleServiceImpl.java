@@ -18,8 +18,9 @@ import java.util.List;
 /**
  * 角色信息 服务接口实现
  *
+ * @version v1.0.0
  * @auther chengen
- * @date 2020/12/18 18:30
+ * @date 2020/12/18 18:24
  */
 @Service
 public class SysRoleServiceImpl extends ServiceImpl<ISysRoleDao, SysRole> implements ISysRoleService {

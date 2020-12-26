@@ -18,8 +18,9 @@ import java.util.List;
 /**
  * 系统访问记录 服务接口实现
  *
+ * @version v1.0.0
  * @auther chengen
- * @date 2020/12/19 14:22
+ * @date 2020/12/18 18:24
  */
 @Service
 public class SysLogininforServiceImpl extends ServiceImpl<ISysLogininforDao, SysLogininfor> implements ISysLogininforService {

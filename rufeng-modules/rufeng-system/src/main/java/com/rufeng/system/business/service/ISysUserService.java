@@ -12,7 +12,8 @@ import java.util.List;
  * 用户信息 服务接口
  *
  * @version v1.0.0
- * @since jdk1.8+
+ * @auther chengen
+ * @date 2020/12/18 18:24
  */
 public interface ISysUserService extends IService<SysUser> {
 

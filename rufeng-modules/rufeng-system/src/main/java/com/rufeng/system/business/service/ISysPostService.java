@@ -10,6 +10,7 @@ import java.util.List;
 /**
  * 岗位信息 服务接口
  *
+ * @version v1.0.0
  * @auther chengen
  * @date 2020/12/18 18:42
  */

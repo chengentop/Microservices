@@ -9,8 +9,11 @@ import java.io.Serializable;
 import java.sql.Timestamp;
 
 /**
+ * SysPost 数据持久化对象
+ *
+ * @version v1.0.0
  * @auther chengen
- * @date 2020/12/18 18:39
+ * @date 2020/12/18 18:24
  */
 @TableName("sys_post")
 public class SysPost implements Serializable {

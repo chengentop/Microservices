@@ -7,6 +7,7 @@ import org.springframework.stereotype.Repository;
 /**
  * SysLogininforDao 数据访问对象
  *
+ * @version v1.0.0
  * @auther chengen
  * @date 2020/12/19 14:22
  */

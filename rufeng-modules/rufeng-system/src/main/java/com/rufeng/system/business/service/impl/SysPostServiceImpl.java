@@ -17,8 +17,10 @@ import java.util.List;
 
 /**
  * 岗位信息 服务接口实现
+ *
+ * @version v1.0.0
  * @auther chengen
- * @date 2020/12/18 18:43
+ * @date 2020/12/18 18:24
  */
 @Service
 public class SysPostServiceImpl extends ServiceImpl<ISysPostDao, SysPost> implements ISysPostService {

@@ -131,26 +131,4 @@ public class SysOperLog implements Serializable{
 	public void setOpertime(Timestamp opertime){
 		this.opertime = opertime;
 	}
-
-	@Override
-	public String toString() {
-		StringBuffer sb = new StringBuffer("com.rufeng: ");
-		if(null != operid)sb.append("operid=").append(operid).append(",");
-		if(null != title)sb.append("title=").append(title).append(",");
-		if(null != businesstype)sb.append("businesstype=").append(businesstype).append(",");
-		if(null != method)sb.append("method=").append(method).append(",");
-		if(null != requestmethod)sb.append("requestmethod=").append(requestmethod).append(",");
-		if(null != operatortype)sb.append("operatortype=").append(operatortype).append(",");
-		if(null != opername)sb.append("opername=").append(opername).append(",");
-		if(null != deptname)sb.append("deptname=").append(deptname).append(",");
-		if(null != operurl)sb.append("operurl=").append(operurl).append(",");
-		if(null != operip)sb.append("operip=").append(operip).append(",");
-		if(null != operlocation)sb.append("operlocation=").append(operlocation).append(",");
-		if(null != operparam)sb.append("operparam=").append(operparam).append(",");
-		if(null != jsonresult)sb.append("jsonresult=").append(jsonresult).append(",");
-		if(null != status)sb.append("status=").append(status).append(",");
-		if(null != errormsg)sb.append("errormsg=").append(errormsg).append(",");
-		if(null != opertime)sb.append("opertime=").append(opertime).append(",");
-		return sb.toString();
-	}
 }
