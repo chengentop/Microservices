@@ -71,5 +71,12 @@ public interface ISysUserService extends IService<SysUser> {
      */
     public boolean deleteSysUser(Integer userid) throws Exception;
 
+    /**
+     * 根据用户名获取用户
+     *
+     * @param username
+     * @return
+     */
 
+    SysUser getByUsername(String username);
 }

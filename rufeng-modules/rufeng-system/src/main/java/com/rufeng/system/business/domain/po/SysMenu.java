@@ -31,6 +31,7 @@ public class SysMenu implements Serializable {
     private String path;  //路由地址
     private String component;  //组件路径
     private String isframe;  //是否为外链（0是 1否）
+    private String iscache; // 是否缓存(0是 1否)
     private String menutype;  //菜单类型（M目录 C菜单 F按钮）
     private String visible;  //菜单状态（0显示 1隐藏）
     private String status;  //菜单状态（0正常 1停用）
@@ -189,6 +190,14 @@ public class SysMenu implements Serializable {
 
     public void setRemark(String remark) {
         this.remark = remark;
+    }
+
+    public String getIscache() {
+        return iscache;
+    }
+
+    public void setIscache(String iscache) {
+        this.iscache = iscache;
     }
 
     public List<SysMenu> getChildren() {

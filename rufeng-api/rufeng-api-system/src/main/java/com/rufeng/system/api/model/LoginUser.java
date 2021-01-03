@@ -20,7 +20,7 @@ public class LoginUser implements Serializable {
     /**
      * 用户名id
      */
-    private Long userid;
+    private Integer userid;
 
     /**
      * 用户名
@@ -144,11 +144,11 @@ public class LoginUser implements Serializable {
         this.user = user;
     }
 
-    public Long getUserid() {
+    public Integer getUserid() {
         return userid;
     }
 
-    public void setUserid(Long userid) {
+    public void setUserid(Integer userid) {
         this.userid = userid;
     }
 

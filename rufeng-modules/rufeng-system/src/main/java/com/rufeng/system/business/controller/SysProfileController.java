@@ -12,5 +12,4 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("user/profile")
 public class SysProfileController {
-
 }

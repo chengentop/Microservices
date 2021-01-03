@@ -20,8 +20,8 @@ import java.util.List;
 public class SysUser implements Serializable {
     private static final long serialVersionUID = 1L;
     @TableId(type = IdType.AUTO)
-    private Long userid;  //用户ID
-    private Long deptid;  //部门ID
+    private Integer userid;  //用户ID
+    private Integer deptid;  //部门ID
     private String username;  //用户账号
     private String nickname;  //用户昵称
     private String usertype;  //用户类型（00系统用户）
@@ -61,21 +61,21 @@ public class SysUser implements Serializable {
      * 岗位组
      */
     @TableField(exist = false)
-    private Long[] postIds;
+    private Integer[] postIds;
 
-    public Long getUserid() {
+    public Integer getUserid() {
         return userid;
     }
 
-    public void setUserid(Long userid) {
+    public void setUserid(Integer userid) {
         this.userid = userid;
     }
 
-    public Long getDeptid() {
+    public Integer getDeptid() {
         return deptid;
     }
 
-    public void setDeptid(Long deptid) {
+    public void setDeptid(Integer deptid) {
         this.deptid = deptid;
     }
 
@@ -227,7 +227,7 @@ public class SysUser implements Serializable {
         return isAdmin(this.userid);
     }
 
-    public static boolean isAdmin(Long userId) {
+    public static boolean isAdmin(Integer userId) {
         return userId != null && 1L == userId;
     }
 
@@ -239,11 +239,11 @@ public class SysUser implements Serializable {
         this.roleIds = roleIds;
     }
 
-    public Long[] getPostIds() {
+    public Integer[] getPostIds() {
         return postIds;
     }
 
-    public void setPostIds(Long[] postIds) {
+    public void setPostIds(Integer[] postIds) {
         this.postIds = postIds;
     }
 

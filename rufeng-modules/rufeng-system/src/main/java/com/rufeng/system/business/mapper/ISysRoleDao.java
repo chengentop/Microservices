@@ -4,6 +4,8 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.rufeng.system.api.domain.SysRole;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 /**
  * SysRoleDao 数据访问对象
  *
@@ -13,4 +15,11 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public interface ISysRoleDao extends BaseMapper<SysRole> {
+    /**
+     * 根据用户id查询角色信息
+     *
+     * @param userid 用户id
+     * @return List<SysRole>
+     */
+    public List<SysRole> selectPermissionByUserId(Integer userid);
 }

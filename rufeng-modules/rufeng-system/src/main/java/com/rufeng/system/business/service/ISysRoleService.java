@@ -5,7 +5,9 @@ import com.baomidou.mybatisplus.extension.service.IService;
 import com.rufeng.common.core.db.Pager;
 import com.rufeng.system.api.domain.SysRole;
 
+import java.util.Collection;
 import java.util.List;
+import java.util.Set;
 
 /**
  * 角色信息 服务接口
@@ -69,4 +71,12 @@ public interface ISysRoleService extends IService<SysRole> {
      * @throws Exception
      */
     public boolean deleteSysRole(Integer roleid) throws Exception;
+
+    /**
+     * 根据用户id 查询用户角色
+     *
+     * @param userId
+     * @return Set<String>
+     */
+    public Set<String> selecteRolePermissionByUserId(Integer userId);
 }

@@ -6,7 +6,9 @@ import com.rufeng.common.core.db.Pager;
 import com.rufeng.common.core.web.domain.R;
 import com.rufeng.common.log.annotation.Log;
 import com.rufeng.common.log.enums.BusinessType;
+import com.rufeng.common.security.utils.SecurityUtils;
 import com.rufeng.system.business.domain.po.SysMenu;
+import com.rufeng.system.business.domain.vo.RouterVo;
 import com.rufeng.system.business.service.ISysMenuService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -108,4 +110,18 @@ public class SysMenuController {
         boolean flag = sysmenuService.delete(menuid);
         return R.ok(flag);
     }
+
+    /**
+     * 根据用户查询 前端路由
+     *
+     * @return
+     */
+    @GetMapping("getRouters")
+    public R<List<RouterVo>> getRouters() {
+        Integer userId = SecurityUtils.getUserId();
+        List<SysMenu> menus = sysmenuService.selectMenuTreeByUserId(userId);
+        List<RouterVo> list = sysmenuService.buildMenus(menus);
+        return R.ok(list);
+    }
+
 }

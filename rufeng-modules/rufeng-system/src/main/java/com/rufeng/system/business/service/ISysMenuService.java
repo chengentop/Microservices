@@ -5,8 +5,11 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.rufeng.common.core.db.Pager;
 import com.rufeng.system.business.domain.po.SysMenu;
+import com.rufeng.system.business.domain.vo.RouterVo;
 
+import java.util.Collection;
 import java.util.List;
+import java.util.Set;
 
 
 /**
@@ -72,4 +75,27 @@ public interface ISysMenuService extends IService<SysMenu> {
      */
     public boolean delete(Integer menuid) throws Exception;
 
+    /**
+     * 根据用户id 查询菜单列表
+     *
+     * @param userId
+     * @return
+     */
+    public Set<String> selectMenuPermissionByUserId(Integer userId);
+
+    /**
+     * 根据用户ID查询菜单树信息
+     *
+     * @param userId 用户ID
+     * @return 菜单列表
+     */
+    public List<SysMenu> selectMenuTreeByUserId(Integer userId);
+
+    /**
+     * 构建前端路由所需要的菜单
+     *
+     * @param menus 菜单列表
+     * @return 路由列表
+     */
+    public List<RouterVo> buildMenus(List<SysMenu> menus);
 }

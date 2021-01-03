@@ -4,4 +4,28 @@
 
 <!--sysuser 映射文件 vision:1.0.0 -->
 <mapper namespace="com.rufeng.system.business.mapper.ISysMenuDao">
+    <select id="selectMenuPermissionByUserId" parameterType="integer" resultType="java.lang.String">
+		select distinct m.perms
+		from sys_menu m
+			 left join sys_role_menu rm on m.menuid = rm.menuid
+			 left join sys_user_role ur on rm.roleid = ur.roleid
+			 left join sys_role r on r.roleid = ur.roleid
+		where m.status = '0' and r.status = '0' and ur.userid = #{userId}
+    </select>
+    <!--<select id="selectMenuTreeAll" resultType="com.rufeng.system.business.domain.po.SysMenu">-->
+		<!--select distinct menuid, parentid, menuname, path, component, visible, status, ifnull(m.perms,'') as perms, isframe, iscache, menutype, icon, ordernum, createtime-->
+		<!--from sys_menu  where menu_type in ('M', 'C') and status = 0-->
+		<!--order by parent_id, order_num-->
+	<!--</select>-->
+
+	<select id="selectMenuTreeByUserId" resultType="com.rufeng.system.business.domain.po.SysMenu">
+	    select distinct m.menuid, m.parentid, m.menuname, m.path, m.component, m.visible, m.status, ifnull(m.perms,'') as perms, m.isframe, m.iscache, m.menutype, m.icon, m.ordernum, m.createtime
+		from sys_menu m
+			 left join sys_role_menu rm on m.menuid = rm.menuid
+			 left join sys_user_role ur on rm.roleid = ur.roleid
+			 left join sys_role ro on ur.roleid = ro.roleid
+			 left join sys_user u on ur.userid = u.userid
+		where u.userid = #{userId} and m.menutype in ('M', 'C') and m.status = 0  AND ro.status = 0
+		order by m.parentid, m.ordernum
+	</select>
 </mapper>

@@ -23,6 +23,6 @@ public interface RemoteUserService {
      * @param username 用户名
      * @return 结果
      */
-    @RequestMapping(value = "/system/sysuser/get/{id}", method = RequestMethod.GET)
-    public R<LoginUser> getUserInfo(@PathVariable("id") String id);
+    @RequestMapping(value = "user/info/{username}", method = RequestMethod.GET)
+    public R<LoginUser> getUserInfo(@PathVariable("username") String username);
 }

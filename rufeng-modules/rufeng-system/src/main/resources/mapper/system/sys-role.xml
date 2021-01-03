@@ -4,4 +4,8 @@
 
 <!--sysuser 映射文件 vision:1.0.0 -->
 <mapper namespace="com.rufeng.system.business.mapper.ISysRoleDao">
+    <select id="selectPermissionByUserId" parameterType="integer" resultType="com.rufeng.system.api.domain.SysRole">
+        select r.* from sys_user_role  ur left join  sys_role  r on ur.roleid = r.roleid
+        where r.delflag = '0'  and ur.userid=#{userid}
+    </select>
 </mapper>

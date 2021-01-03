@@ -12,6 +12,7 @@ import com.rufeng.system.api.domain.SysUser;
 import com.rufeng.system.api.model.LoginUser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 /**
  * 登录校验方法
@@ -19,6 +20,7 @@ import org.springframework.stereotype.Component;
  * @author ruoyi
  */
 @Component
+@Service
 public class SysLoginService {
     @Autowired
     private RemoteLogService remoteLogService;
