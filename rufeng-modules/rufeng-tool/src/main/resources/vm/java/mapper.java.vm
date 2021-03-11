@@ -1,0 +1,16 @@
+package ${packageName}.mapper;
+
+import ${packageName}.domain.po.${ClassName};
+import org.springframework.stereotype.Repository;
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+
+/**
+ * ${functionName}Mapper接口
+ *
+ * @author ${author}
+ * @date ${datetime}
+ */
+@Repository
+public interface I${ClassName}Dao extends BaseMapper<${ClassName}> {
+
+}
