@@ -3,6 +3,7 @@ package com.rufeng.system.business.controller;
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.rufeng.common.core.db.Pager;
+import com.rufeng.common.core.web.controller.BaseController;
 import com.rufeng.common.core.web.domain.R;
 import com.rufeng.system.api.domain.SysOperLog;
 import com.rufeng.system.business.service.ISysOperLogService;
@@ -20,7 +21,7 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("operlog")
-public class SysOperLogController {
+public class SysOperLogController extends BaseController {
 
     @Autowired
     private ISysOperLogService sysoperlogService;

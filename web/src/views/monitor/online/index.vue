@@ -39,7 +39,7 @@
       <el-table-column label="登录名称" align="center" prop="username" :show-overflow-tooltip="true" />
       <el-table-column label="部门名称" align="center" prop="deptname" />
       <el-table-column label="主机" align="center" prop="ipaddr" :show-overflow-tooltip="true" />
-      <el-table-column label="登录地点" align="center" prop="loginLocation" :show-overflow-tooltip="true" />
+      <el-table-column label="登录地点" align="center" prop="loginlocation" :show-overflow-tooltip="true" />
       <el-table-column label="浏览器" align="center" prop="browser" />
       <el-table-column label="操作系统" align="center" prop="os" />
       <el-table-column label="登录时间" align="center" prop="logintime" width="180">
@@ -81,7 +81,7 @@ export default {
       totalSize: 10,
       // 查询参数
       queryParams: {
-         currentPage: 1,
+        currentPage: 1,
         totalSize: 10,
         ipaddr: undefined,
         username: undefined
@@ -96,7 +96,7 @@ export default {
     getList() {
       this.loading = true;
       list(this.queryParams).then(response => {
-        this.list = response.data.userlist;
+        this.list = response.data.records;
         this.total = response.data.total;
         this.loading = false;
       });

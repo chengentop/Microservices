@@ -161,14 +161,14 @@
             v-hasPermi="['system:role:edit']"
             >修改</el-button
           >
-          <el-button
+          <!-- <el-button
             size="mini"
             type="text"
             icon="el-icon-circle-check"
             @click="handleDataScope(scope.row)"
             v-hasPermi="['system:role:edit']"
             >数据权限</el-button
-          >
+          > -->
           <el-button
             size="mini"
             type="text"
@@ -227,7 +227,7 @@
             >全选/全不选</el-checkbox
           >
           <el-checkbox
-            v-model="form.menu_check_strictly"
+            v-model="form.menucheckstrictly"
             @change="handleCheckedTreeConnect($event, 'menu')"
             >父子联动</el-checkbox
           >
@@ -237,7 +237,7 @@
             show-checkbox
             ref="menu"
             node-key="id"
-            :check-strictly="!form.menu_check_strictly"
+            :check-strictly="!form.menucheckstrictly"
             empty-text="加载中，请稍后"
             :props="defaultProps"
           ></el-tree>
@@ -310,29 +310,29 @@ export default {
       dateRange: [],
       // 状态数据字典
       statusOptions: [],
-      // 数据范围选项
-      dataScopeOptions: [
-        {
-          value: "1",
-          label: "全部数据权限",
-        },
-        {
-          value: "2",
-          label: "自定数据权限",
-        },
-        {
-          value: "3",
-          label: "本部门数据权限",
-        },
-        {
-          value: "4",
-          label: "本部门及以下数据权限",
-        },
-        {
-          value: "5",
-          label: "仅本人数据权限",
-        },
-      ],
+      // // 数据范围选项
+      // dataScopeOptions: [
+      //   {
+      //     value: "1",
+      //     label: "全部数据权限",
+      //   },
+      //   {
+      //     value: "2",
+      //     label: "自定数据权限",
+      //   },
+      //   {
+      //     value: "3",
+      //     label: "本部门数据权限",
+      //   },
+      //   {
+      //     value: "4",
+      //     label: "本部门及以下数据权限",
+      //   },
+      //   {
+      //     value: "5",
+      //     label: "仅本人数据权限",
+      //   },
+      // ],
       // 菜单列表
       menuOptions: [],
       // 部门列表
@@ -377,8 +377,8 @@ export default {
       this.loading = true;
       listRole(this.addDateRange(this.queryParams, this.dateRange)).then(
         (response) => {
-          this.roleList = response.data.data.records;
-          this.total = response.data.data.total;
+          this.roleList = response.data.records;
+          this.total = response.data.total;
           this.loading = false;
         }
       );
@@ -386,7 +386,7 @@ export default {
     /** 查询菜单树结构 */
     getMenuTreeselect() {
       menuTreeselect().then((response) => {
-        this.menuOptions = response.data.menuTrees;
+        this.menuOptions = response.data;
       });
     },
     // 所有菜单节点数据
@@ -449,7 +449,7 @@ export default {
           status: "0",
           menuIds: [],
           deptIds: [],
-          menu_check_strictly: true,
+          menucheckstrictly: true,
           remark: undefined,
         });
       this.resetForm("form");
@@ -489,7 +489,7 @@ export default {
     // 树权限（父子联动）
     handleCheckedTreeConnect(value, type) {
       if (type == "menu") {
-        this.form.menu_check_strictly = value ? true : false;
+        this.form.menucheckstrictly = value ? true : false;
       }
     },
     /** 新增按钮操作 */
@@ -505,7 +505,7 @@ export default {
       const roleid = row.roleid || this.ids;
       const roleMenu = this.getRoleMenuTreeselect(roleid);
       getRole(roleid).then((response) => {
-        this.form = response.data.sysrole;
+        this.form = response.data;
         this.open = true;
         this.$nextTick(() => {
           roleMenu.then((res) => {
@@ -522,7 +522,7 @@ export default {
           if (this.form.roleid != undefined) {
             this.form.menuIds = this.getMenuAllCheckedKeys();
             updateRole(this.form).then((response) => {
-              if (response.code === 200 && response.data.updated) {
+              if (response.code === 200 && response.success) {
                 this.msgSuccess("修改成功");
                 this.open = false;
                 this.getList();
@@ -531,7 +531,7 @@ export default {
           } else {
             this.form.menuIds = this.getMenuAllCheckedKeys();
             addRole(this.form).then((response) => {
-              if (response.code === 200 && response.data.inserted) {
+              if (response.code === 200 && response.success) {
                 this.msgSuccess("新增成功");
                 this.open = false;
                 this.getList();

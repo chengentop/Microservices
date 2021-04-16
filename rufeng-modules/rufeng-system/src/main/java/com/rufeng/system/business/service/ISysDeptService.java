@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.rufeng.common.core.db.Pager;
 import com.rufeng.system.api.domain.SysDept;
+import com.rufeng.system.business.domain.vo.TreeSelect;
 
 import java.util.List;
 
@@ -71,5 +72,19 @@ public interface ISysDeptService extends IService<SysDept> {
      */
     public boolean delete(Integer deptid) throws Exception;
 
+    /**
+     * 构建前端所需要树结构
+     *
+     * @param list
+     * @return
+     */
+    public List<TreeSelect> buildDeptTreeSelect(List<SysDept> list);
 
+    /**
+     * 构建前端所需要树结构
+     *
+     * @param list
+     * @return
+     */
+    public List<SysDept> buildDeptTree(List<SysDept> list);
 }

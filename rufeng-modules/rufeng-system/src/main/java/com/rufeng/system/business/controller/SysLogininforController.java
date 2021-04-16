@@ -5,7 +5,9 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.rufeng.common.core.constant.Constants;
 import com.rufeng.common.core.db.Pager;
 import com.rufeng.common.core.utils.ServletUtils;
+import com.rufeng.common.core.utils.ip.AddressUtils;
 import com.rufeng.common.core.utils.ip.IpUtils;
+import com.rufeng.common.core.web.controller.BaseController;
 import com.rufeng.common.core.web.domain.R;
 import com.rufeng.system.business.domain.po.SysLogininfor;
 import com.rufeng.system.business.domain.po.SysPost;
@@ -24,7 +26,7 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("logininfor")
-public class SysLogininforController {
+public class SysLogininforController extends BaseController {
 
     @Autowired
     private ISysLogininforService sysLogininforService;
@@ -79,6 +81,7 @@ public class SysLogininforController {
         String ipAddr = IpUtils.getIpAddr(ServletUtils.getRequest());
         SysLogininfor logininfor = new SysLogininfor();
         logininfor.setIpaddr(ipAddr);
+        logininfor.setLoginlocation(AddressUtils.getRealAddressByIP(ipAddr));
         logininfor.setUsername(username);
         logininfor.setMsg(message);
         if (Constants.LOGIN_SUCCESS.equals(status) || Constants.LOGOUT.equals(status)) {

@@ -24,9 +24,9 @@ import java.util.Map;
 public class SysMenu implements Serializable {
     private static final long serialVersionUID = 1L;
     @TableId(type = IdType.AUTO)
-    private Long menuid;  //菜单ID
+    private Integer menuid;  //菜单ID
     private String menuname;  //菜单名称
-    private Long parentid;  //父菜单ID
+    private Integer parentid;  //父菜单ID
     private Integer ordernum;  //显示顺序
     private String path;  //路由地址
     private String component;  //组件路径
@@ -56,11 +56,11 @@ public class SysMenu implements Serializable {
     @TableField(exist = false)
     private Map<String, Object> params;
 
-    public Long getMenuid() {
+    public Integer getMenuid() {
         return this.menuid;
     }
 
-    public void setMenuid(Long menuid) {
+    public void setMenuid(Integer menuid) {
         this.menuid = menuid;
     }
 
@@ -72,11 +72,11 @@ public class SysMenu implements Serializable {
         this.menuname = menuname;
     }
 
-    public Long getParentid() {
+    public Integer getParentid() {
         return this.parentid;
     }
 
-    public void setParentid(Long parentid) {
+    public void setParentid(Integer parentid) {
         this.parentid = parentid;
     }
 

@@ -3,17 +3,21 @@ package com.rufeng.system.business.controller;
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.rufeng.common.core.db.Pager;
+import com.rufeng.common.core.web.controller.BaseController;
 import com.rufeng.common.core.web.domain.R;
 import com.rufeng.common.log.annotation.Log;
 import com.rufeng.common.log.enums.BusinessType;
 import com.rufeng.common.security.utils.SecurityUtils;
 import com.rufeng.system.business.domain.po.SysMenu;
 import com.rufeng.system.business.domain.vo.RouterVo;
+import com.rufeng.system.business.domain.vo.TreeSelect;
 import com.rufeng.system.business.service.ISysMenuService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 
 /**
@@ -24,7 +28,7 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("menu")
-public class SysMenuController {
+public class SysMenuController extends BaseController {
 
     @Autowired
     private ISysMenuService sysmenuService;
@@ -122,6 +126,30 @@ public class SysMenuController {
         List<SysMenu> menus = sysmenuService.selectMenuTreeByUserId(userId);
         List<RouterVo> list = sysmenuService.buildMenus(menus);
         return R.ok(list);
+    }
+
+    /**
+     * 获取用户菜单列表
+     *
+     * @return
+     */
+    @GetMapping("treeselect")
+    public R<List<TreeSelect>> treeselect(SysMenu menu) throws Exception {
+        List<SysMenu> menus = sysmenuService.selectMenuList(menu);
+        List<TreeSelect> treelist = sysmenuService.buildMenuTreeSelect(menus);
+        return R.ok(treelist);
+    }
+
+    /**
+     * 加载对应角色菜单列表树
+     */
+    @GetMapping(value = "/roleMenuTreeselect/{roleId}")
+    public R<Map<String, Object>> roleMenuTreeselect(@PathVariable("roleId") Integer roleId) throws Exception {
+        List<SysMenu> menus = sysmenuService.selectMenuList(new SysMenu());
+        Map<String, Object> map = new HashMap<>();
+        map.put("checkedKeys", sysmenuService.selectMenuListByRoleId(roleId));
+        map.put("menus", sysmenuService.buildMenuTreeSelect(menus));
+        return R.ok(map);
     }
 
 }

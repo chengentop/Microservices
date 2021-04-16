@@ -74,7 +74,7 @@
       <el-table-column label="字典编码" align="center" prop="dictcode" />
       <el-table-column label="字典标签" align="center" prop="dictlabel" />
       <el-table-column label="字典键值" align="center" prop="dictvalue" />
-      <el-table-column label="字典排序" align="center" prop="dict_sort" />
+      <el-table-column label="字典排序" align="center" prop="dictsort" />
       <el-table-column label="状态" align="center" prop="status" :formatter="statusFormat" />
       <el-table-column label="备注" align="center" prop="remark" :show-overflow-tooltip="true" />
       <el-table-column label="创建时间" align="center" prop="createtime" width="180">
@@ -122,8 +122,8 @@
         <el-form-item label="数据键值" prop="dictvalue">
           <el-input v-model="form.dictvalue" placeholder="请输入数据键值" />
         </el-form-item>
-        <el-form-item label="显示排序" prop="dict_sort">
-          <el-input-number v-model="form.dict_sort" controls-position="right" :min="0" />
+        <el-form-item label="显示排序" prop="dictsort">
+          <el-input-number v-model="form.dictsort" controls-position="right" :min="0" />
         </el-form-item>
         <el-form-item label="状态" prop="status">
           <el-radio-group v-model="form.status">
@@ -207,30 +207,30 @@ export default {
     this.getType(dictId);
     this.getTypeList();
     this.getDicts("sys_normal_disable").then(response => {
-      this.statusOptions = response.data.dictDatas;
+      this.statusOptions = response.data;
     });
   },
   methods: {
     /** 查询字典类型详细 */
     getType(dictId) {
       getType(dictId).then(response => {
-        this.queryParams.dicttype = response.data.sysdicttype.dicttype;
-        this.defaultdicttype = response.data.sysdicttype.dicttype;
+        this.queryParams.dicttype = response.data.dicttype;
+        this.defaultdicttype = response.data.dicttype;
         this.getList();
       });
     },
     /** 查询字典类型列表 */
     getTypeList() {
       list().then(response => {
-        this.typeOptions = response.data.sysdicttypes;
+        this.typeOptions = response.data;
       });
     },
     /** 查询字典数据列表 */
     getList() {
       this.loading = true;
       listData(this.queryParams).then(response => {
-        this.dataList = response.data.data.records;
-        this.total = response.data.data.total;
+        this.dataList = response.data.records;
+        this.total = response.data.total;
         this.loading = false;
       });
     },
@@ -284,7 +284,7 @@ export default {
       this.reset();
       const dictcode = row.dictcode || this.ids
       getData(dictcode).then(response => {
-        this.form = response.data.sysdictdata;
+        this.form = response.data;
         this.open = true;
         this.title = "修改字典数据";
       });

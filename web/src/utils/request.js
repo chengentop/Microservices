@@ -52,7 +52,13 @@ service.interceptors.response.use(res => {
       title: msg
     })
     return Promise.reject('error')
-  } else {
+  } else if(res.data.status==429){
+    Message({
+      message: res.data.message,
+      type: 'error'
+    })
+    return Promise.reject(new Error(msg))
+  }else {
     return res.data
   }
 },

@@ -9,17 +9,22 @@ import com.rufeng.common.core.constant.UserConstants;
 import com.rufeng.common.core.db.Pager;
 import com.rufeng.common.core.utils.StringUtils;
 import com.rufeng.common.security.utils.SecurityUtils;
+import com.rufeng.system.api.domain.SysRole;
+import com.rufeng.system.api.domain.SysUser;
 import com.rufeng.system.business.domain.po.SysMenu;
 import com.rufeng.system.business.domain.vo.MetaVo;
 import com.rufeng.system.business.domain.vo.RouterVo;
+import com.rufeng.system.business.domain.vo.TreeSelect;
 import com.rufeng.system.business.mapper.ISysMenuDao;
 import com.rufeng.system.business.service.ISysMenuService;
+import com.rufeng.system.business.service.ISysRoleService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 
 /**
@@ -35,6 +40,9 @@ public class SysMenuServiceImpl extends ServiceImpl<ISysMenuDao, SysMenu> implem
 
     @Autowired
     private ISysMenuDao sysmenuDao;
+
+    @Autowired
+    private ISysRoleService roleService;
 
     @Override
     public SysMenu get(Integer menuid) throws Exception {
@@ -132,6 +140,7 @@ public class SysMenuServiceImpl extends ServiceImpl<ISysMenuDao, SysMenu> implem
 
     @Override
     public List<RouterVo> buildMenus(List<SysMenu> menus) {
+        log.debug("###[服务] 开始循环构建菜单树信息,menus=[{}]", menus);
         List<RouterVo> routers = new LinkedList<RouterVo>();
         for (SysMenu menu : menus) {
             RouterVo router = new RouterVo();
@@ -158,8 +167,69 @@ public class SysMenuServiceImpl extends ServiceImpl<ISysMenuDao, SysMenu> implem
             }
             routers.add(router);
         }
+        log.info("###[服务] 完成循环构建菜单树信息，routers=[{}]", routers);
         return routers;
     }
+
+    @Override
+    public List<SysMenu> selectMenuList(SysMenu menu) throws Exception {
+        Integer userId = SecurityUtils.getUserId();
+        log.debug("###[服务] 开始根据用户id查询菜单树信息,userId=[{}]", userId);
+        List<SysMenu> menuList = null;
+        if (SysUser.isAdmin(userId)) {
+            menuList = list(menu);
+        } else {
+            QueryWrapper<SysMenu> queryWrapper = new QueryWrapper<>();
+            queryWrapper.eq("ur.user_id", userId).orderBy(true, false, "m.parentid", " m.ordernum");
+            menuList = sysmenuDao.selectMenuListByUserId(queryWrapper);
+        }
+        log.info("###[服务] 完成据用户id查询菜单树信息，menuList=[{}]", menuList);
+        return menuList;
+    }
+
+    @Override
+    public List<TreeSelect> buildMenuTreeSelect(List<SysMenu> menus) {
+        log.debug("###[服务] 开始根据菜单列表信息构建菜单树,menus=[{}]", menus);
+        List<SysMenu> menuTrees = buildMenuTree(menus);
+        List<TreeSelect> tree = menuTrees.stream().map(TreeSelect::new).collect(Collectors.toList());
+        log.info("###[服务] 完成根据菜单列表信息构建菜单树,tree=[{}]", tree);
+        return tree;
+    }
+
+    /**
+     * 构建前端所需要树结构
+     *
+     * @param menus 菜单列表
+     * @return 树结构列表
+     */
+    @Override
+    public List<SysMenu> buildMenuTree(List<SysMenu> menus) {
+
+        List<SysMenu> returnList = new ArrayList<SysMenu>();
+        List<Integer> tempList = new ArrayList<>();
+        for (SysMenu dept : menus) {
+            tempList.add(dept.getMenuid());
+        }
+        for (Iterator<SysMenu> iterator = menus.iterator(); iterator.hasNext(); ) {
+            SysMenu menu = (SysMenu) iterator.next();
+            // 如果是顶级节点, 遍历该父节点的所有子节点
+            if (!tempList.contains(menu.getParentid())) {
+                recursionFn(menus, menu);
+                returnList.add(menu);
+            }
+        }
+        if (returnList.isEmpty()) {
+            returnList = menus;
+        }
+        return returnList;
+    }
+
+    @Override
+    public List<Integer> selectMenuListByRoleId(Integer roleId) throws Exception {
+        SysRole role = roleService.get(roleId);
+        return sysmenuDao.selectMenuListByRoleId(roleId, role.isMenucheckstrictly());
+    }
+
 
 
     /**
@@ -280,4 +350,7 @@ public class SysMenuServiceImpl extends ServiceImpl<ISysMenuDao, SysMenu> implem
     private boolean hasChild(List<SysMenu> list, SysMenu t) {
         return getChildList(list, t).size() > 0 ? true : false;
     }
+
+
+
 }

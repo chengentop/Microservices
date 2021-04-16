@@ -178,7 +178,6 @@
 import { listConfig, getConfig, delConfig, addConfig, updateConfig, exportConfig, clearCache } from "@/api/system/config";
 
 export default {
-  name: "Config",
   data() {
     return {
       // 遮罩层
@@ -230,7 +229,7 @@ export default {
   created() {
     this.getList();
     this.getDicts("sys_yes_no").then(response => {
-      this.typeOptions = response.data.dictDatas;
+      this.typeOptions = response.data;
     });
   },
   methods: {
@@ -238,8 +237,8 @@ export default {
     getList() {
       this.loading = true;
       listConfig(this.addDateRange(this.queryParams, this.dateRange)).then(response => {
-          this.configList = response.data.data.records;
-          this.total = response.data.data.total;
+          this.configList = response.data.records;
+          this.total = response.data.total;
           this.loading = false;
         }
       );
@@ -293,7 +292,7 @@ export default {
       this.reset();
       const configid = row.configid || this.ids
       getConfig(configid).then(response => {
-        this.form = response.data.sysconfig;
+        this.form = response.data;
         this.open = true;
         this.title = "修改参数";
       });

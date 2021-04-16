@@ -546,7 +546,7 @@ export default {
       this.sexOptions = response.data.dictDatas;
     });
     this.getConfigKey("sys.user.initPassword").then((response) => {
-      this.initPassword = response.data.config;
+      this.initPassword = response.data;
     });
   },
   methods: {
@@ -555,8 +555,8 @@ export default {
       this.loading = true;
       listUser(this.addDateRange(this.queryParams, this.dateRange)).then(
         (response) => {
-          this.userList = response.data.userlist.records;
-          this.total = response.data.userlist.total;
+          this.userList = response.data.records;
+          this.total = response.data.total;
           this.loading = false;
         }
       );
@@ -564,7 +564,7 @@ export default {
     /** 查询部门下拉树结构 */
     getTreeselect() {
       treeselect().then((response) => {
-        this.deptOptions = response.data.deptTrees;
+        this.deptOptions = response.data;
       });
     },
     // 筛选节点

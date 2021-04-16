@@ -209,7 +209,7 @@
           </el-col>
           <el-col :span="12">
             <el-form-item v-if="form.menutype != 'F'" label="是否外链">
-              <el-radio-group v-model="form.is_frame">
+              <el-radio-group v-model="form.isframe">
                 <el-radio label="0">是</el-radio>
                 <el-radio label="1">否</el-radio>
               </el-radio-group>
@@ -337,10 +337,10 @@ export default {
   created() {
     this.getList();
     this.getDicts("sys_show_hide").then((response) => {
-      this.visibleOptions = response.data.dictDatas;
+      this.visibleOptions = response.data;
     });
     this.getDicts("sys_normal_disable").then((response) => {
-      this.statusOptions = response.data.dictDatas;
+      this.statusOptions = response.data;
     });
   },
   methods: {
@@ -352,7 +352,7 @@ export default {
     getList() {
       this.loading = true;
       listMenu(this.queryParams).then((response) => {
-        this.menuList = this.handleTree(response.data.sysmenus, "menuid");
+        this.menuList = this.handleTree(response.data, "menuid");
         this.loading = false;
       });
     },
@@ -372,7 +372,7 @@ export default {
       listMenu().then((response) => {
         this.menuOptions = [];
         const menu = { menuid: 0, menuname: "主类目", children: [] };
-        menu.children = this.handleTree(response.data.sysmenus, "menuid");
+        menu.children = this.handleTree(response.data, "menuid");
         this.menuOptions.push(menu);
       });
     },
@@ -437,7 +437,7 @@ export default {
       this.reset();
       this.getTreeselect();
       getMenu(row.menuid).then((response) => {
-        this.form = response.data.sysmenu;
+        this.form = response.data;
         this.open = true;
         this.title = "修改菜单";
       });

@@ -70,5 +70,11 @@ public interface ISysConfigService extends IService<SysConfig> {
      */
     public boolean delete(Integer config_id) throws Exception;
 
-
+    /**
+     * 根据参数键名获取参数配置
+     *
+     * @param configkey 参数键名
+     * @return SysConfig
+     */
+    public SysConfig getByConfigKey(String configkey);
 }

@@ -74,9 +74,17 @@ public interface ISysUserService extends IService<SysUser> {
     /**
      * 根据用户名获取用户
      *
-     * @param username
-     * @return
+     * @param username 用户名
+     * @return SysUser
+     * @throws Exception
      */
+    public SysUser getByUsername(String username);
 
-    SysUser getByUsername(String username);
+    /**
+     * 修改用户状态
+     * @param userId 用户id
+     * @return boolean
+     * @throws Exception
+     */
+    public boolean changeStatus(Integer userid,String status);
 }

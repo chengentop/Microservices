@@ -4,4 +4,5 @@
 
 <!--sysuser 映射文件 vision:1.0.0 -->
 <mapper namespace="com.rufeng.system.business.mapper.ISysUserDao">
+
 </mapper>

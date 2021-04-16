@@ -19,7 +19,7 @@ import java.sql.Timestamp;
 public class SysDictType implements Serializable {
     private static final long serialVersionUID = 1L;
     @TableId(type = IdType.AUTO)
-    private Long dictid;  //字典主键
+    private Integer dictid;  //字典主键
     private String dictname;  //字典名称
     private String dicttype;  //字典类型
     private String status;  //状态（0正常 1停用）
@@ -31,11 +31,11 @@ public class SysDictType implements Serializable {
     private Timestamp updatetime;  //更新时间
     private String remark;  //备注
 
-    public Long getDictid() {
+    public Integer getDictid() {
         return this.dictid;
     }
 
-    public void setDictid(Long dictid) {
+    public void setDictid(Integer dictid) {
         this.dictid = dictid;
     }
 

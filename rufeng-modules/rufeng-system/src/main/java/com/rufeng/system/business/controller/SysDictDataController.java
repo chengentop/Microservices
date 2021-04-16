@@ -3,6 +3,7 @@ package com.rufeng.system.business.controller;
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.rufeng.common.core.db.Pager;
+import com.rufeng.common.core.web.controller.BaseController;
 import com.rufeng.common.core.web.domain.R;
 import com.rufeng.common.log.annotation.Log;
 import com.rufeng.common.log.enums.BusinessType;
@@ -24,7 +25,7 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("dict/data")
-public class SysDictDataController {
+public class SysDictDataController extends BaseController {
     private Logger log = LoggerFactory.getLogger(SysDictDataController.class);
 
     @Autowired

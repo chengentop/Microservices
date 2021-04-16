@@ -4,4 +4,12 @@
 
 <!--sysuser 映射文件 vision:1.0.0 -->
 <mapper namespace="com.rufeng.system.business.mapper.ISysDeptDao">
+    <update id="updateDeptStatus" parameterType="com.rufeng.system.api.domain.SysDept">
+        update sys_dept
+        <set>
+            <if test="status != null and status != ''">status = #{status},</if>
+            updatetime = sysdate()
+        </set>
+        where deptid in (${ancestors})
+    </update>
 </mapper>

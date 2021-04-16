@@ -1,6 +1,7 @@
 package com.rufeng.system.business.controller;
 
 
+import com.rufeng.common.core.web.controller.BaseController;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -11,5 +12,5 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping("user/profile")
-public class SysProfileController {
+public class SysProfileController extends BaseController {
 }

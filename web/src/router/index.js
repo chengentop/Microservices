@@ -92,19 +92,7 @@ export const constantRoutes = [
       }
     ]
   },
-  {
-    path: '/article',
-    component: Layout,
-    hidden: true,
-    children: [
-      {
-        path: 'edit/:articleid(\\d+)',
-        component: (resolve) => require(['@/views/article/edit'], resolve),
-        name: 'edit',
-        meta: { title: '修改文章', icon: 'edit' }
-      }
-    ]
-  },
+
 ]
 
 export default new Router({

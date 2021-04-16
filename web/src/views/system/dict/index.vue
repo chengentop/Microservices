@@ -177,7 +177,6 @@
 import { listType, getType, delType, addType, updateType, exportType, clearCache } from "@/api/system/dict/type";
 
 export default {
-  name: "Dict",
   data() {
     return {
       // 遮罩层
@@ -226,7 +225,7 @@ export default {
   created() {
     this.getList();
     this.getDicts("sys_normal_disable").then(response => {
-      this.statusOptions = response.data.dictDatas;
+      this.statusOptions = response.data;
     });
   },
   methods: {
@@ -234,8 +233,8 @@ export default {
     getList() {
       this.loading = true;
       listType(this.addDateRange(this.queryParams, this.dateRange)).then(response => {
-          this.typeList = response.data.data.records;
-          this.total = response.data.data.total;
+          this.typeList = response.data.records;
+          this.total = response.data.total;
           this.loading = false;
         }
       );
@@ -288,7 +287,7 @@ export default {
       this.reset();
       const dictid = row.dictid || this.ids
       getType(dictid).then(response => {
-        this.form = response.data.sysdicttype;
+        this.form = response.data;
         this.open = true;
         this.title = "修改字典类型";
       });

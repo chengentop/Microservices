@@ -13,4 +13,10 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public interface ISysDeptDao extends BaseMapper<SysDept> {
+    /**
+     * 修改该部门的父级部门状态
+     *
+     * @param dept 当前部门
+     */
+    public int updateDeptStatus(SysDept dept);
 }

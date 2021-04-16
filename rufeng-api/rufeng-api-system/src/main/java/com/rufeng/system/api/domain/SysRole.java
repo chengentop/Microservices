@@ -15,11 +15,11 @@ import java.sql.Timestamp;
  * @version v1.0.0
  * @since jdk1.8+
  */
-@TableName("sys_role")
+@TableName(value = "sys_role")
 public class SysRole implements Serializable {
     private static final long serialVersionUID = 1L;
     @TableId(type = IdType.AUTO)
-    private Long roleid;  //角色ID
+    private Integer roleid;  //角色ID
     private String rolename;  //角色名称
     private String rolekey;  //角色权限字符串
     private Integer rolesort;  //显示顺序
@@ -38,14 +38,14 @@ public class SysRole implements Serializable {
      * 菜单组
      */
     @TableField(exist = false)
-    private Long[] menuIds;
+    private Integer[] menuIds;
 
 
-    public Long getRoleid() {
+    public Integer getRoleid() {
         return this.roleid;
     }
 
-    public void setRoleid(Long roleid) {
+    public void setRoleid(Integer roleid) {
         this.roleid = roleid;
     }
 
@@ -149,15 +149,15 @@ public class SysRole implements Serializable {
         return isAdmin(this.roleid);
     }
 
-    public static boolean isAdmin(Long roleid) {
+    public static boolean isAdmin(Integer roleid) {
         return roleid != null && 1L == roleid;
     }
 
-    public Long[] getMenuIds() {
+    public Integer[] getMenuIds() {
         return menuIds;
     }
 
-    public void setMenuIds(Long[] menuIds) {
+    public void setMenuIds(Integer[] menuIds) {
         this.menuIds = menuIds;
     }
 

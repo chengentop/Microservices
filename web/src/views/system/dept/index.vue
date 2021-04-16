@@ -277,7 +277,7 @@ export default {
   created() {
     this.getList();
     this.getDicts("sys_normal_disable").then((response) => {
-      this.statusOptions = response.data.dictDatas;
+      this.statusOptions = response.data;
     });
   },
   methods: {
@@ -285,7 +285,7 @@ export default {
     getList() {
       this.loading = true;
       listDept(this.queryParams).then((response) => {
-        this.deptList = this.handleTree(response.data.sysdepts, "deptid");
+        this.deptList = this.handleTree(response.data, "deptid");
         this.loading = false;
       });
     },
@@ -348,12 +348,12 @@ export default {
     handleUpdate(row) {
       this.reset();
       getDept(row.deptid).then((response) => {
-        this.form = response.data.sysdept;
+        this.form = response.data;
         this.open = true;
         this.title = "修改部门";
       });
       listDeptExcludeChild(row.deptid).then((response) => {
-        this.deptOptions = this.handleTree(response.data.nomenus, "deptid");
+        this.deptOptions = this.handleTree(response.data, "deptid");
       });
     },
     /** 提交按钮 */

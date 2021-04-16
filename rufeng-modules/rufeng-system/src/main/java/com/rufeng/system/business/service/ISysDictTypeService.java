@@ -3,6 +3,7 @@ package com.rufeng.system.business.service;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.rufeng.common.core.db.Pager;
+import com.rufeng.system.business.domain.po.SysDictData;
 import com.rufeng.system.business.domain.po.SysDictType;
 
 import java.util.List;
@@ -71,4 +72,11 @@ public interface ISysDictTypeService extends IService<SysDictType> {
      */
     public boolean delete(Integer dictid) throws Exception;
 
+    /**
+     * 根据字典类型获取字典类型
+     *
+     * @param dicttype 字典类型
+     * @return SysDictType
+     */
+    public List<SysDictData> getByDictType(String dicttype);
 }

@@ -145,7 +145,6 @@
 import { listPost, getPost, delPost, addPost, updatePost, exportPost } from "@/api/system/post";
 
 export default {
-  name: "Post",
   data() {
     return {
       // 遮罩层
@@ -195,7 +194,7 @@ export default {
   created() {
     this.getList();
     this.getDicts("sys_normal_disable").then(response => {
-      this.statusOptions = response.data.dictDatas;
+      this.statusOptions = response.data;
     });
   },
   methods: {
@@ -203,8 +202,8 @@ export default {
     getList() {
       this.loading = true;
       listPost(this.queryParams).then(response => {
-        this.postList = response.data.data.records;
-        this.total = response.data.data.total;
+        this.postList = response.data.records;
+        this.total = response.data.total;
         this.loading = false;
       });
     },
@@ -256,7 +255,7 @@ export default {
       this.reset();
       const postid = row.postid || this.ids
       getPost(postid).then(response => {
-        this.form = response.data.syspost;
+        this.form = response.data;
         this.open = true;
         this.title = "修改岗位";
       });

@@ -6,6 +6,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
 import com.rufeng.common.core.db.Pager;
 import com.rufeng.system.business.domain.po.SysMenu;
 import com.rufeng.system.business.domain.vo.RouterVo;
+import com.rufeng.system.business.domain.vo.TreeSelect;
 
 import java.util.Collection;
 import java.util.List;
@@ -98,4 +99,34 @@ public interface ISysMenuService extends IService<SysMenu> {
      * @return 路由列表
      */
     public List<RouterVo> buildMenus(List<SysMenu> menus);
+
+    /**
+     * 获取用户菜单列表
+     *
+     * @param menu
+     * @return
+     */
+    public List<SysMenu> selectMenuList(SysMenu menu) throws Exception;
+
+    /**
+     * 构建菜单下拉树列表
+     *
+     * @param menus
+     * @return
+     */
+    public List<TreeSelect> buildMenuTreeSelect(List<SysMenu> menus);
+
+    /**
+     * @param menus
+     * @return
+     */
+    public List<SysMenu> buildMenuTree(List<SysMenu> menus);
+
+    /**
+     * 根据角色id 查询菜单列表
+     *
+     * @param roleId
+     * @return
+     */
+    public List<Integer> selectMenuListByRoleId(Integer roleId) throws Exception;
 }

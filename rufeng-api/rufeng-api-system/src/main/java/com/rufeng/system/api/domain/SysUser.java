@@ -16,7 +16,7 @@ import java.util.List;
  * @version v1.0.0
  * @since jdk1.8+
  */
-@TableName("sys_user")
+@TableName(value = "sys_user")
 public class SysUser implements Serializable {
     private static final long serialVersionUID = 1L;
     @TableId(type = IdType.AUTO)

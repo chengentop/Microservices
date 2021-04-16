@@ -22,4 +22,12 @@ public interface ISysRoleDao extends BaseMapper<SysRole> {
      * @return List<SysRole>
      */
     public List<SysRole> selectPermissionByUserId(Integer userid);
+
+    /**
+     * 根据用户id查询角色信息
+     *
+     * @param roleid
+     * @return
+     */
+    public SysRole selectRoleById(Integer roleid);
 }

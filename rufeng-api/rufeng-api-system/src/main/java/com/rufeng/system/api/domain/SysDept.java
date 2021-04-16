@@ -17,12 +17,12 @@ import java.util.List;
  * @version v1.0.0
  * @since jdk1.8+
  */
-@TableName("sys_dept")
+@TableName(value = "sys_dept")
 public class SysDept implements Serializable {
     private static final long serialVersionUID = 1L;
     @TableId(type = IdType.AUTO)
-    private Long deptid;  //部门id
-    private Long parentid;  //父部门id
+    private Integer deptid;  //部门id
+    private Integer parentid;  //父部门id
     private String ancestors;  //祖级列表
     private String deptname;  //部门名称
     private String ordernum;  //显示顺序
@@ -31,6 +31,8 @@ public class SysDept implements Serializable {
     private String email;  //邮箱
     private String status;  //部门状态（0正常 1停用）
     private String delflag;  //删除标志（0代表存在 2代表删除）
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss",timezone="Asia/Shanghai")
+    private Timestamp createtime;
     /**
      * 父部门名称
      */
@@ -43,19 +45,19 @@ public class SysDept implements Serializable {
     @TableField(exist = false)
     private List<SysDept> children = new ArrayList<SysDept>();
 
-    public Long getDeptid() {
+    public Integer getDeptid() {
         return deptid;
     }
 
-    public void setDeptid(Long deptid) {
+    public void setDeptid(Integer deptid) {
         this.deptid = deptid;
     }
 
-    public Long getParentid() {
+    public Integer getParentid() {
         return parentid;
     }
 
-    public void setParentid(Long parentid) {
+    public void setParentid(Integer parentid) {
         this.parentid = parentid;
     }
 
@@ -140,6 +142,14 @@ public class SysDept implements Serializable {
         this.children = children;
     }
 
+    public Timestamp getCreatetime() {
+        return createtime;
+    }
+
+    public void setCreatetime(Timestamp createtime) {
+        this.createtime = createtime;
+    }
+
     @Override
     public String toString() {
         StringBuffer sb = new StringBuffer("com.rufeng: ");
@@ -153,6 +163,7 @@ public class SysDept implements Serializable {
         if (null != email) sb.append("email=").append(email).append(",");
         if (null != status) sb.append("status=").append(status).append(",");
         if (null != delflag) sb.append("delflag=").append(delflag).append(",");
+        if (null != createtime) sb.append("createtime=").append(createtime).append(",");
         return sb.toString();
     }
 }
