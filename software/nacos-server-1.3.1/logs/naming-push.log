@@ -1,0 +1,33 @@
+2021-07-31 18:11:01,214 INFO DEFAULT_GROUP@@rufeng-gateway is changed, add it to push queue.
+
+2021-07-31 18:11:01,258 INFO serviceName: DEFAULT_GROUP@@rufeng-gateway changed, schedule push for: 192.168.1.105:51612, agent: Nacos-Java-Client:v1.3.3, key: 192.168.1.105,51612,19489203276900
+
+2021-07-31 18:11:01,258 INFO send udp packet: 192.168.1.105,51612,19489203276900
+
+2021-07-31 18:11:01,261 INFO serviceName: DEFAULT_GROUP@@rufeng-gateway changed, schedule push for: 192.168.1.105:51612, agent: Nacos-Java-Client:v1.3.3, key: 192.168.1.105,51612,19489203276900
+
+2021-07-31 18:11:01,261 INFO send udp packet: 192.168.1.105,51612,19489203276900
+
+2021-07-31 18:11:01,286 INFO received ack: {"type": "push-ack", "lastRefTime":"19489203276900", "data":""} from: 192.168.1.105:51612, cost: 25 ms, unacked: 0, total push: 1
+
+2021-07-31 18:11:01,288 ERROR [NACOS-PUSH] error while receiving ack data
+
+java.lang.IllegalStateException: unable to find ackEntry for key: 192.168.1.105,51612,19489203276900, ack json: {"type": "push-ack", "lastRefTime":"19489203276900", "data":""}
+	at com.alibaba.nacos.naming.push.PushService$Receiver.run(PushService.java:677)
+	at java.lang.Thread.run(Thread.java:748)
+2021-07-31 18:11:33,781 INFO DEFAULT_GROUP@@rufeng-auth is changed, add it to push queue.
+
+2021-07-31 18:11:33,782 INFO serviceName: DEFAULT_GROUP@@rufeng-auth changed, schedule push for: 192.168.1.105:64879, agent: Nacos-Java-Client:v1.3.3, key: 192.168.1.105,64879,19521741272600
+
+2021-07-31 18:11:33,782 INFO send udp packet: 192.168.1.105,64879,19521741272600
+
+2021-07-31 18:11:33,786 INFO received ack: {"type": "push-ack", "lastRefTime":"19521741272600", "data":""} from: 192.168.1.105:64879, cost: 4 ms, unacked: 0, total push: 2
+
+2021-07-31 18:12:14,624 INFO DEFAULT_GROUP@@rufeng-system is changed, add it to push queue.
+
+2021-07-31 18:12:14,624 INFO serviceName: DEFAULT_GROUP@@rufeng-system changed, schedule push for: 192.168.1.105:59456, agent: Nacos-Java-Client:v1.3.3, key: 192.168.1.105,59456,19562583937500
+
+2021-07-31 18:12:14,625 INFO send udp packet: 192.168.1.105,59456,19562583937500
+
+2021-07-31 18:12:14,629 INFO received ack: {"type": "push-ack", "lastRefTime":"19562583937500", "data":""} from: 192.168.1.105:59456, cost: 5 ms, unacked: 0, total push: 3
+

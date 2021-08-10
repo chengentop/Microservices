@@ -1,0 +1,36 @@
+2021-07-31 18:09:07,154 INFO open empty service auto clean job, initialDelay : 50000 ms, period : 30000 ms
+
+2021-07-31 18:09:07,154 INFO listen for service meta change
+
+2021-07-31 18:09:42,559 INFO open empty service auto clean job, initialDelay : 50000 ms, period : 30000 ms
+
+2021-07-31 18:09:42,559 INFO listen for service meta change
+
+2021-07-31 18:10:18,159 INFO open empty service auto clean job, initialDelay : 50000 ms, period : 30000 ms
+
+2021-07-31 18:10:18,159 INFO listen for service meta change
+
+2021-07-31 18:11:00,146 INFO creating empty service public:DEFAULT_GROUP@@rufeng-gateway
+
+2021-07-31 18:11:00,174 INFO [NEW-SERVICE] {"name":"DEFAULT_GROUP@@rufeng-gateway","protectThreshold":0.0,"groupName":"DEFAULT_GROUP","metadata":{},"finalizeCount":0,"owners":[],"resetWeight":false,"enabled":true,"selector":{"type":"none"},"namespaceId":"public","ipDeleteTimeout":30000,"lastModifiedMillis":1627726260149,"checksum":"f084ef31a76d8e098e78a12eaa882ca2","clusterMap":{},"empty":true}
+
+2021-07-31 18:11:00,179 WARN cluster: DEFAULT not found, ip: {"instanceId":"192.168.1.105#9000#DEFAULT#DEFAULT_GROUP@@rufeng-gateway","ip":"192.168.1.105","port":9000,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@rufeng-gateway","metadata":{"preserved.register.source":"SPRING_CLOUD"},"lastBeat":1627726260135,"marked":false,"app":"unknown","instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000}, will create new cluster with default configuration.
+
+2021-07-31 18:11:00,200 INFO [NACOS-RAFT] datum is changed, key: com.alibaba.nacos.naming.iplist.ephemeral.public##DEFAULT_GROUP@@rufeng-gateway, value: {"instanceList":[{"instanceId":"192.168.1.105#9000#DEFAULT#DEFAULT_GROUP@@rufeng-gateway","ip":"192.168.1.105","port":9000,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@rufeng-gateway","metadata":{"preserved.register.source":"SPRING_CLOUD"},"lastBeat":1627726260135,"marked":false,"app":"unknown","instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000}]}
+
+2021-07-31 18:11:32,777 INFO creating empty service public:DEFAULT_GROUP@@rufeng-auth
+
+2021-07-31 18:11:32,777 INFO [NEW-SERVICE] {"name":"DEFAULT_GROUP@@rufeng-auth","protectThreshold":0.0,"groupName":"DEFAULT_GROUP","metadata":{},"finalizeCount":0,"owners":[],"resetWeight":false,"enabled":true,"selector":{"type":"none"},"namespaceId":"public","ipDeleteTimeout":30000,"lastModifiedMillis":1627726292777,"checksum":"72fcdb3f0cf9e655ee5f83eddf997d98","clusterMap":{},"empty":true}
+
+2021-07-31 18:11:32,777 WARN cluster: DEFAULT not found, ip: {"instanceId":"192.168.1.105#9101#DEFAULT#DEFAULT_GROUP@@rufeng-auth","ip":"192.168.1.105","port":9101,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@rufeng-auth","metadata":{"preserved.register.source":"SPRING_CLOUD"},"lastBeat":1627726292775,"marked":false,"app":"unknown","instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000}, will create new cluster with default configuration.
+
+2021-07-31 18:11:32,777 INFO [NACOS-RAFT] datum is changed, key: com.alibaba.nacos.naming.iplist.ephemeral.public##DEFAULT_GROUP@@rufeng-auth, value: {"instanceList":[{"instanceId":"192.168.1.105#9101#DEFAULT#DEFAULT_GROUP@@rufeng-auth","ip":"192.168.1.105","port":9101,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@rufeng-auth","metadata":{"preserved.register.source":"SPRING_CLOUD"},"lastBeat":1627726292775,"marked":false,"app":"unknown","instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000}]}
+
+2021-07-31 18:12:13,622 INFO creating empty service public:DEFAULT_GROUP@@rufeng-system
+
+2021-07-31 18:12:13,622 INFO [NEW-SERVICE] {"name":"DEFAULT_GROUP@@rufeng-system","protectThreshold":0.0,"groupName":"DEFAULT_GROUP","metadata":{},"finalizeCount":0,"owners":[],"resetWeight":false,"enabled":true,"selector":{"type":"none"},"namespaceId":"public","ipDeleteTimeout":30000,"lastModifiedMillis":1627726333622,"checksum":"9709bc0f714b4c274fb3f1035f201ddd","clusterMap":{},"empty":true}
+
+2021-07-31 18:12:13,622 WARN cluster: DEFAULT not found, ip: {"instanceId":"192.168.1.105#9201#DEFAULT#DEFAULT_GROUP@@rufeng-system","ip":"192.168.1.105","port":9201,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@rufeng-system","metadata":{"preserved.register.source":"SPRING_CLOUD"},"lastBeat":1627726333621,"marked":false,"app":"unknown","instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000}, will create new cluster with default configuration.
+
+2021-07-31 18:12:13,622 INFO [NACOS-RAFT] datum is changed, key: com.alibaba.nacos.naming.iplist.ephemeral.public##DEFAULT_GROUP@@rufeng-system, value: {"instanceList":[{"instanceId":"192.168.1.105#9201#DEFAULT#DEFAULT_GROUP@@rufeng-system","ip":"192.168.1.105","port":9201,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@rufeng-system","metadata":{"preserved.register.source":"SPRING_CLOUD"},"lastBeat":1627726333621,"marked":false,"app":"unknown","instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000}]}
+

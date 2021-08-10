@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="common-security" />
+        <module name="gen" />
+        <module name="system" />
+        <module name="auth" />
+        <module name="api-system" />
+        <module name="common-log" />
+        <module name="common-redis" />
+        <module name="gateway" />
+        <module name="common-core" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="8">
+      <module name="api" target="1.8" />
+      <module name="api-system" target="1.8" />
+      <module name="auth" target="1.8" />
+      <module name="com.auth" target="1.8" />
+      <module name="common" target="1.8" />
+      <module name="common-core" target="1.8" />
+      <module name="common-log" target="1.8" />
+      <module name="common-redis" target="1.8" />
+      <module name="common-security" target="1.8" />
+      <module name="gateway" target="1.8" />
+      <module name="gen" target="1.8" />
+      <module name="Microservices" target="1.8" />
+      <module name="modules" target="1.8" />
+      <module name="system" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

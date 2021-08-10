@@ -1,0 +1,6 @@
+2021-03-19 19:07:09,137 INFO DEFAULT_GROUP@@rufeng-gateway {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.10.1:9000:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-03-19 19:07:09,144 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@rufeng-gateway, ips: 192.168.10.1:9000_true,
+
+2021-03-19 19:25:45,732 INFO {POS} {IP-DISABLED} valid: 192.168.10.1:9000@DEFAULT@DEFAULT_GROUP@@rufeng-gateway, region: unknown, msg: client timeout after 15000, last beat: 1616153130164
+

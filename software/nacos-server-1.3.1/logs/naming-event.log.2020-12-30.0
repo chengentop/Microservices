@@ -1,0 +1,230 @@
+2020-12-30 17:20:52,438 INFO DEFAULT_GROUP@@rufeng-auth {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.1.8:9101:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-30 17:20:52,441 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@rufeng-auth, ips: 192.168.1.8:9101_true,
+
+2020-12-30 17:21:06,249 INFO DEFAULT_GROUP@@rufeng-gateway {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.1.8:9000:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-30 17:21:06,249 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@rufeng-gateway, ips: 192.168.1.8:9000_true,
+
+2020-12-30 17:21:27,775 INFO DEFAULT_GROUP@@rufeng-system {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.1.8:9201:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-30 17:21:27,775 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@rufeng-system, ips: 192.168.1.8:9201_true,
+
+2020-12-30 18:59:32,338 INFO {POS} {IP-DISABLED} valid: 192.168.1.8:9201@DEFAULT@DEFAULT_GROUP@@rufeng-system, region: unknown, msg: client timeout after 15000, last beat: 1609325953979
+
+2020-12-30 18:59:47,465 INFO DEFAULT_GROUP@@rufeng-system {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.1.8:9201:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2020-12-30 18:59:47,466 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@rufeng-system, ips: 
+
+2020-12-30 18:59:49,799 INFO DEFAULT_GROUP@@rufeng-system {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.1.8:9201:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-30 18:59:49,799 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@rufeng-system, ips: 192.168.1.8:9201_true,
+
+2020-12-30 19:00:21,684 INFO {POS} {IP-DISABLED} valid: 192.168.1.8:9101@DEFAULT@DEFAULT_GROUP@@rufeng-auth, region: unknown, msg: client timeout after 15000, last beat: 1609326006124
+
+2020-12-30 19:00:22,511 INFO {POS} {IP-DISABLED} valid: 192.168.1.8:9201@DEFAULT@DEFAULT_GROUP@@rufeng-system, region: unknown, msg: client timeout after 15000, last beat: 1609326004860
+
+2020-12-30 19:00:25,769 INFO {POS} {IP-DISABLED} valid: 192.168.1.8:9000@DEFAULT@DEFAULT_GROUP@@rufeng-gateway, region: unknown, msg: client timeout after 15000, last beat: 1609326005888
+
+2020-12-30 19:00:27,654 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@rufeng-system, ips: 192.168.1.8:9201_false,
+
+2020-12-30 19:00:30,809 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@rufeng-gateway, ips: 192.168.1.8:9000_false,
+
+2020-12-30 19:00:32,670 INFO service: DEFAULT_GROUP@@rufeng-system {POS} {IP-ENABLED} valid: 192.168.1.8:9201@DEFAULT, region: unknown, msg: client beat ok
+
+2020-12-30 19:00:34,865 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@rufeng-auth, ips: 192.168.1.8:9101_false,
+
+2020-12-30 19:00:35,814 INFO service: DEFAULT_GROUP@@rufeng-gateway {POS} {IP-ENABLED} valid: 192.168.1.8:9000@DEFAULT, region: unknown, msg: client beat ok
+
+2020-12-30 19:00:39,871 INFO service: DEFAULT_GROUP@@rufeng-auth {POS} {IP-ENABLED} valid: 192.168.1.8:9101@DEFAULT, region: unknown, msg: client beat ok
+
+2020-12-30 19:43:39,844 INFO {POS} {IP-DISABLED} valid: 192.168.1.8:9000@DEFAULT@DEFAULT_GROUP@@rufeng-gateway, region: unknown, msg: client timeout after 15000, last beat: 1609328603017
+
+2020-12-30 19:43:40,560 INFO {POS} {IP-DISABLED} valid: 192.168.1.8:9101@DEFAULT@DEFAULT_GROUP@@rufeng-auth, region: unknown, msg: client timeout after 15000, last beat: 1609328604138
+
+2020-12-30 19:43:41,701 INFO {POS} {IP-DISABLED} valid: 192.168.1.8:9201@DEFAULT@DEFAULT_GROUP@@rufeng-system, region: unknown, msg: client timeout after 15000, last beat: 1609328602046
+
+2020-12-30 19:43:54,885 INFO DEFAULT_GROUP@@rufeng-gateway {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.1.8:9000:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2020-12-30 19:43:54,885 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@rufeng-gateway, ips: 
+
+2020-12-30 19:43:55,601 INFO DEFAULT_GROUP@@rufeng-auth {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.1.8:9101:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2020-12-30 19:43:55,601 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@rufeng-auth, ips: 
+
+2020-12-30 19:43:56,479 INFO DEFAULT_GROUP@@rufeng-auth {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.1.8:9101:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-30 19:43:56,479 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@rufeng-auth, ips: 192.168.1.8:9101_true,
+
+2020-12-30 19:43:56,760 INFO DEFAULT_GROUP@@rufeng-system {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.1.8:9201:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2020-12-30 19:43:56,760 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@rufeng-system, ips: 
+
+2020-12-30 19:44:09,206 INFO DEFAULT_GROUP@@rufeng-system {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.1.8:9201:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-30 19:44:09,206 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@rufeng-system, ips: 192.168.1.8:9201_true,
+
+2020-12-30 19:44:10,796 INFO DEFAULT_GROUP@@rufeng-gateway {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.1.8:9000:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-30 19:44:10,796 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@rufeng-gateway, ips: 192.168.1.8:9000_true,
+
+2020-12-30 20:11:15,308 INFO DEFAULT_GROUP@@rufeng-gateway {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.1.8:9000:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-30 20:11:15,308 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@rufeng-gateway, ips: 
+
+2020-12-30 20:11:15,513 INFO DEFAULT_GROUP@@rufeng-auth {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.1.8:9101:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-30 20:11:15,514 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@rufeng-auth, ips: 
+
+2020-12-30 20:11:15,577 INFO DEFAULT_GROUP@@rufeng-system {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.1.8:9201:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-30 20:11:15,578 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@rufeng-system, ips: 
+
+2020-12-30 20:11:54,346 INFO DEFAULT_GROUP@@rufeng-auth {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.1.8:9101:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-30 20:11:54,346 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@rufeng-auth, ips: 192.168.1.8:9101_true,
+
+2020-12-30 20:12:04,118 INFO DEFAULT_GROUP@@rufeng-system {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.1.8:9201:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-30 20:12:04,118 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@rufeng-system, ips: 192.168.1.8:9201_true,
+
+2020-12-30 20:12:09,969 INFO DEFAULT_GROUP@@rufeng-gateway {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.1.8:9000:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-30 20:12:09,969 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@rufeng-gateway, ips: 192.168.1.8:9000_true,
+
+2020-12-30 20:15:16,912 INFO DEFAULT_GROUP@@rufeng-gateway {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.1.8:9000:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-30 20:15:16,912 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@rufeng-gateway, ips: 
+
+2020-12-30 20:15:27,079 INFO DEFAULT_GROUP@@rufeng-auth {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.1.8:9101:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-30 20:15:27,079 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@rufeng-auth, ips: 
+
+2020-12-30 20:15:27,135 INFO DEFAULT_GROUP@@rufeng-system {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.1.8:9201:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-30 20:15:27,135 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@rufeng-system, ips: 
+
+2020-12-30 20:15:52,658 INFO DEFAULT_GROUP@@rufeng-gateway {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.1.8:9000:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-30 20:15:52,658 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@rufeng-gateway, ips: 192.168.1.8:9000_true,
+
+2020-12-30 20:16:02,312 INFO DEFAULT_GROUP@@rufeng-auth {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.1.8:9101:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-30 20:16:02,312 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@rufeng-auth, ips: 192.168.1.8:9101_true,
+
+2020-12-30 20:16:08,159 INFO DEFAULT_GROUP@@rufeng-system {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.1.8:9201:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-30 20:16:08,159 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@rufeng-system, ips: 192.168.1.8:9201_true,
+
+2020-12-30 20:19:10,333 INFO DEFAULT_GROUP@@rufeng-system {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.1.8:9201:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-30 20:19:10,333 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@rufeng-system, ips: 
+
+2020-12-30 20:19:36,263 INFO DEFAULT_GROUP@@rufeng-system {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.1.8:9201:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-30 20:19:36,263 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@rufeng-system, ips: 192.168.1.8:9201_true,
+
+2020-12-30 20:20:33,165 INFO DEFAULT_GROUP@@rufeng-gateway {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.1.8:9000:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-30 20:20:33,165 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@rufeng-gateway, ips: 
+
+2020-12-30 20:20:33,527 INFO DEFAULT_GROUP@@rufeng-auth {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.1.8:9101:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-30 20:20:33,527 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@rufeng-auth, ips: 
+
+2020-12-30 20:20:33,685 INFO DEFAULT_GROUP@@rufeng-system {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.1.8:9201:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-30 20:20:33,685 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@rufeng-system, ips: 
+
+2020-12-30 20:21:46,537 INFO DEFAULT_GROUP@@rufeng-system {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.1.8:9201:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-30 20:21:46,537 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@rufeng-system, ips: 192.168.1.8:9201_true,
+
+2020-12-30 20:21:48,477 INFO DEFAULT_GROUP@@rufeng-gateway {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.1.8:9000:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-30 20:21:48,477 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@rufeng-gateway, ips: 192.168.1.8:9000_true,
+
+2020-12-30 20:21:52,496 INFO DEFAULT_GROUP@@rufeng-auth {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.1.8:9101:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-30 20:21:52,496 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@rufeng-auth, ips: 192.168.1.8:9101_true,
+
+2020-12-30 20:25:00,639 INFO DEFAULT_GROUP@@rufeng-gateway {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.1.8:9000:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-30 20:25:00,639 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@rufeng-gateway, ips: 
+
+2020-12-30 20:25:00,782 INFO DEFAULT_GROUP@@rufeng-system {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.1.8:9201:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-30 20:25:00,783 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@rufeng-system, ips: 
+
+2020-12-30 20:25:00,972 INFO DEFAULT_GROUP@@rufeng-auth {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.1.8:9101:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-30 20:25:00,972 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@rufeng-auth, ips: 
+
+2020-12-30 20:26:08,642 INFO DEFAULT_GROUP@@rufeng-auth {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.1.8:9101:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-30 20:26:08,642 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@rufeng-auth, ips: 192.168.1.8:9101_true,
+
+2020-12-30 20:26:11,791 INFO DEFAULT_GROUP@@rufeng-gateway {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.1.8:9000:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-30 20:26:11,791 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@rufeng-gateway, ips: 192.168.1.8:9000_true,
+
+2020-12-30 20:26:17,440 INFO DEFAULT_GROUP@@rufeng-system {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.1.8:9201:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-30 20:26:17,440 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@rufeng-system, ips: 192.168.1.8:9201_true,
+
+2020-12-30 20:31:48,023 INFO DEFAULT_GROUP@@rufeng-system {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.1.8:9201:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-30 20:31:48,023 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@rufeng-system, ips: 
+
+2020-12-30 20:32:13,353 INFO DEFAULT_GROUP@@rufeng-system {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.1.8:9201:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-30 20:32:13,353 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@rufeng-system, ips: 192.168.1.8:9201_true,
+
+2020-12-30 22:05:58,061 INFO {POS} {IP-DISABLED} valid: 192.168.1.8:9000@DEFAULT@DEFAULT_GROUP@@rufeng-gateway, region: unknown, msg: client timeout after 15000, last beat: 1609332092960
+
+2020-12-30 22:05:58,066 INFO {POS} {IP-DISABLED} valid: 192.168.1.8:9201@DEFAULT@DEFAULT_GROUP@@rufeng-system, region: unknown, msg: client timeout after 15000, last beat: 1609332089278
+
+2020-12-30 22:05:58,064 INFO {POS} {IP-DISABLED} valid: 192.168.1.8:9101@DEFAULT@DEFAULT_GROUP@@rufeng-auth, region: unknown, msg: client timeout after 15000, last beat: 1609332089999
+
+2020-12-30 22:05:58,077 INFO service: DEFAULT_GROUP@@rufeng-auth {POS} {IP-ENABLED} valid: 192.168.1.8:9101@DEFAULT, region: unknown, msg: client beat ok
+
+2020-12-30 22:05:58,077 INFO service: DEFAULT_GROUP@@rufeng-system {POS} {IP-ENABLED} valid: 192.168.1.8:9201@DEFAULT, region: unknown, msg: client beat ok
+
+2020-12-30 22:05:58,308 INFO DEFAULT_GROUP@@rufeng-system {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.1.8:9201:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-30 22:05:58,308 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@rufeng-system, ips: 
+
+2020-12-30 22:05:58,309 INFO DEFAULT_GROUP@@rufeng-auth {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.1.8:9101:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-30 22:05:58,309 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@rufeng-auth, ips: 
+
+2020-12-30 22:05:58,325 INFO DEFAULT_GROUP@@rufeng-gateway {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.1.8:9000:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2020-12-30 22:05:58,325 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@rufeng-gateway, ips: 
+
+2020-12-30 22:06:00,090 INFO DEFAULT_GROUP@@rufeng-gateway {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.1.8:9000:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-30 22:06:00,090 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@rufeng-gateway, ips: 192.168.1.8:9000_true,
+
+2020-12-30 22:06:03,111 INFO DEFAULT_GROUP@@rufeng-auth {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.1.8:9101:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-30 22:06:03,111 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@rufeng-auth, ips: 192.168.1.8:9101_true,
+
+2020-12-30 22:06:03,115 INFO DEFAULT_GROUP@@rufeng-system {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.1.8:9201:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-30 22:06:03,115 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@rufeng-system, ips: 192.168.1.8:9201_true,
+
+2020-12-30 22:09:24,804 INFO DEFAULT_GROUP@@rufeng-system {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.1.8:9201:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-30 22:09:24,804 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@rufeng-system, ips: 
+
+2020-12-30 22:09:27,593 INFO DEFAULT_GROUP@@rufeng-gateway {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.1.8:9000:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-12-30 22:09:27,593 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@rufeng-gateway, ips: 
+
+2020-12-30 22:09:58,421 INFO {POS} {IP-DISABLED} valid: 192.168.1.8:9101@DEFAULT@DEFAULT_GROUP@@rufeng-auth, region: unknown, msg: client timeout after 15000, last beat: 1609337378462
+
+2020-12-30 22:10:13,459 INFO DEFAULT_GROUP@@rufeng-auth {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.1.8:9101:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2020-12-30 22:10:13,459 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@rufeng-auth, ips: 
+

@@ -1,0 +1,4 @@
+2021-03-22 18:43:35,855 WARN [master-db] jdbc:mysql://chengen.work:3306/nacos?characterEncoding=utf8&connectTimeout=1000&socketTimeout=3000&autoReconnect=true&useUnicode=true&useSSL=false&serverTimezone=UTC
+
+2021-03-22 18:43:39,930 WARN isQuickStart:false
+

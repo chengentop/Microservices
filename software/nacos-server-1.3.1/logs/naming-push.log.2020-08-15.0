@@ -1,0 +1,82 @@
+2020-08-15 15:36:44,270 INFO DEFAULT_GROUP@@admin-server is changed, add it to push queue.
+
+2020-08-15 15:36:44,315 INFO serviceName: DEFAULT_GROUP@@admin-server changed, schedule push for: 192.168.137.1:61098, agent: Nacos-Java-Client:v1.1.4, key: 192.168.137.1,61098,18389331125700
+
+2020-08-15 15:36:44,315 INFO send udp packet: 192.168.137.1,61098,18389331125700
+
+2020-08-15 15:36:44,380 INFO received ack: {"type": "push-ack", "lastRefTime":"18389331125700", "data":""} from: 192.168.137.1:61098, cost: 65 ms, unacked: 0, total push: 1
+
+2020-08-15 15:53:44,321 INFO DEFAULT_GROUP@@admin-server is changed, add it to push queue.
+
+2020-08-15 15:53:46,353 INFO DEFAULT_GROUP@@gateway-server is changed, add it to push queue.
+
+2020-08-15 15:53:59,492 INFO DEFAULT_GROUP@@admin-server is changed, add it to push queue.
+
+2020-08-15 17:56:28,308 INFO DEFAULT_GROUP@@gateway-server is changed, add it to push queue.
+
+2020-08-15 17:56:43,323 INFO DEFAULT_GROUP@@gateway-server is changed, add it to push queue.
+
+2020-08-15 21:33:32,840 INFO DEFAULT_GROUP@@admin-server is changed, add it to push queue.
+
+2020-08-15 21:33:32,840 INFO serviceName: DEFAULT_GROUP@@admin-server changed, schedule push for: 192.168.137.1:56566, agent: Nacos-Java-Client:v1.1.4, key: 192.168.137.1,56566,39829554730700
+
+2020-08-15 21:33:32,840 INFO send udp packet: 192.168.137.1,56566,39829554730700
+
+2020-08-15 21:33:32,840 INFO received ack: {"type": "push-ack", "lastRefTime":"39829554730700", "data":""} from: 192.168.137.1:56566, cost: 0 ms, unacked: 0, total push: 2
+
+2020-08-15 21:37:58,458 INFO DEFAULT_GROUP@@admin-server is changed, add it to push queue.
+
+2020-08-15 21:38:08,487 INFO DEFAULT_GROUP@@admin-server is changed, add it to push queue.
+
+2020-08-15 21:39:16,452 INFO DEFAULT_GROUP@@admin-server is changed, add it to push queue.
+
+2020-08-15 21:39:16,452 INFO serviceName: DEFAULT_GROUP@@admin-server changed, schedule push for: 192.168.137.1:49493, agent: Nacos-Java-Client:v1.1.4, key: 192.168.137.1,49493,40173165974000
+
+2020-08-15 21:39:16,452 INFO send udp packet: 192.168.137.1,49493,40173165974000
+
+2020-08-15 21:39:16,452 INFO received ack: {"type": "push-ack", "lastRefTime":"40173165974000", "data":""} from: 192.168.137.1:49493, cost: 0 ms, unacked: 0, total push: 3
+
+2020-08-15 21:41:14,872 INFO DEFAULT_GROUP@@gateway-server is changed, add it to push queue.
+
+2020-08-15 21:55:55,726 INFO DEFAULT_GROUP@@gateway-server is changed, add it to push queue.
+
+2020-08-15 21:55:55,726 INFO serviceName: DEFAULT_GROUP@@gateway-server changed, schedule push for: 192.168.137.1:49493, agent: Nacos-Java-Client:v1.1.4, key: 192.168.137.1,49493,41172440196000
+
+2020-08-15 21:55:55,726 INFO send udp packet: 192.168.137.1,49493,41172440196000
+
+2020-08-15 21:55:55,728 INFO received ack: {"type": "push-ack", "lastRefTime":"41172440196000", "data":""} from: 192.168.137.1:49493, cost: 2 ms, unacked: 0, total push: 4
+
+2020-08-15 21:56:10,744 INFO DEFAULT_GROUP@@gateway-server is changed, add it to push queue.
+
+2020-08-15 21:56:10,744 INFO serviceName: DEFAULT_GROUP@@gateway-server changed, schedule push for: 192.168.137.1:49493, agent: Nacos-Java-Client:v1.1.4, key: 192.168.137.1,49493,41187458670100
+
+2020-08-15 21:56:10,744 INFO send udp packet: 192.168.137.1,49493,41187458670100
+
+2020-08-15 21:56:10,747 INFO received ack: {"type": "push-ack", "lastRefTime":"41187458670100", "data":""} from: 192.168.137.1:49493, cost: 3 ms, unacked: 0, total push: 5
+
+2020-08-15 22:18:50,560 INFO DEFAULT_GROUP@@admin-server is changed, add it to push queue.
+
+2020-08-15 22:19:05,565 INFO DEFAULT_GROUP@@admin-server is changed, add it to push queue.
+
+2020-08-15 22:22:01,072 INFO DEFAULT_GROUP@@gateway-server is changed, add it to push queue.
+
+2020-08-15 22:23:58,618 INFO DEFAULT_GROUP@@gateway-server is changed, add it to push queue.
+
+2020-08-15 22:24:49,782 INFO DEFAULT_GROUP@@gateway-server is changed, add it to push queue.
+
+2020-08-15 22:27:38,977 INFO DEFAULT_GROUP@@gateway-server is changed, add it to push queue.
+
+2020-08-15 22:33:16,355 INFO DEFAULT_GROUP@@gateway-server is changed, add it to push queue.
+
+2020-08-15 22:39:47,569 INFO DEFAULT_GROUP@@gateway-server is changed, add it to push queue.
+
+2020-08-15 22:40:47,496 INFO DEFAULT_GROUP@@gateway-server is changed, add it to push queue.
+
+2020-08-15 22:41:25,365 INFO DEFAULT_GROUP@@gateway-server is changed, add it to push queue.
+
+2020-08-15 22:42:06,925 INFO DEFAULT_GROUP@@gateway-server is changed, add it to push queue.
+
+2020-08-15 22:42:21,975 INFO DEFAULT_GROUP@@gateway-server is changed, add it to push queue.
+
+2020-08-15 22:42:48,985 INFO DEFAULT_GROUP@@gateway-server is changed, add it to push queue.
+

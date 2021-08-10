@@ -1,0 +1,10 @@
+2021-03-19 19:07:10,159 INFO DEFAULT_GROUP@@rufeng-gateway is changed, add it to push queue.
+
+2021-03-19 19:07:10,300 INFO serviceName: DEFAULT_GROUP@@rufeng-gateway changed, schedule push for: 192.168.137.1:60408, agent: Nacos-Java-Client:v1.3.3, key: 192.168.137.1,60408,124753956070100
+
+2021-03-19 19:07:10,301 INFO send udp packet: 192.168.137.1,60408,124753956070100
+
+2021-03-19 19:07:10,352 INFO received ack: {"type": "push-ack", "lastRefTime":"124753956070100", "data":""} from: 192.168.137.1:60408, cost: 51 ms, unacked: 0, total push: 1
+
+2021-03-19 19:25:46,746 INFO DEFAULT_GROUP@@rufeng-gateway is changed, add it to push queue.
+

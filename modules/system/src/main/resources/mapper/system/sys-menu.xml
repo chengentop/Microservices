@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--sysuser 映射文件 vision:1.0.0 -->
+<mapper namespace="com.rufeng.system.business.mapper.ISysMenuDao">
+    <select id="selectMenuPermissionByUserId" parameterType="integer" resultType="java.lang.String">
+		select distinct m.perms
+		from sys_menu m
+			 left join sys_role_menu rm on m.menuid = rm.menuid
+			 left join sys_user_role ur on rm.roleid = ur.roleid
+			 left join sys_role r on r.roleid = ur.roleid
+		where m.status = '0' and r.status = '0' and ur.userid = #{userId}
+    </select>
+
+    <select id="selectMenuTreeByUserId" resultType="com.rufeng.system.business.domain.po.SysMenu">
+	    select distinct m.menuid, m.parentid, m.menuname, m.path, m.component, m.visible, m.status, ifnull(m.perms,'') as perms, m.isframe, m.iscache, m.menutype, m.icon, m.ordernum, m.createtime
+		from sys_menu m
+			 left join sys_role_menu rm on m.menuid = rm.menuid
+			 left join sys_user_role ur on rm.roleid = ur.roleid
+			 left join sys_role ro on ur.roleid = ro.roleid
+			 left join sys_user u on ur.userid = u.userid
+		where u.userid = #{userId} and m.menutype in ('M', 'C') and m.status = 0  AND ro.status = 0
+		order by m.parentid, m.ordernum
+	</select>
+    <select id="selectMenuListByUserId" resultType="com.rufeng.system.business.domain.po.SysMenu">
+        select distinct m.menuid, m.parentid, m.menuname, m.path, m.component, m.visible, m.status,
+        ifnull(m.perms,'') as perms, m.isframe, m.iscache, m.menutype, m.icon, m.ordernum, m.createtime
+        from sys_menu m
+        left join sys_role_menu rm on m.menu_id = rm.menu_id
+        left join sys_user_role ur on rm.role_id = ur.role_id
+        left join sys_role ro on ur.role_id = ro.role_id
+        where ur.userid = #{ew.userId}
+        <if test="ew.menuName != null and ew.menuName != ''">
+            AND menuname like concat('%', #{ew.menuName}, '%')
+        </if>
+        <if test="ew.visible != null and ew.visible != ''">
+            AND visible = #{ew.visible}
+        </if>
+        <if test="ew.status != null and ew.status != ''">
+            AND status = #{ew.status}
+        </if>
+    </select>
+    <select id="selectMenuListByRoleId" resultType="java.lang.Integer">
+        select m.menuid
+        from sys_menu m
+        left join sys_role_menu rm on m.menuid = rm.menuid
+        where rm.roleid = #{roleid}
+        <if test="menucheckstrictly">
+            and m.menuid not in (select m.parentid from sys_menu m inner join sys_role_menu rm on m.menuid = rm.menuid and rm.roleid = #{roleid})
+        </if>
+        order by m.parentid, m.ordernum
+    </select>
+</mapper>

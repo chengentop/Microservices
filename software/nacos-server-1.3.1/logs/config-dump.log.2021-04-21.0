@@ -1,0 +1,10 @@
+2021-04-21 11:45:54,107 INFO [dump-all-ok] application-dev.yml+DEFAULT_GROUP, 1598951670000, length=491, md5=57470c6d167154919418fa150863b7fb
+
+2021-04-21 11:45:54,109 INFO [dump-all-ok] sentinel-ruoyi-gateway+DEFAULT_GROUP, 1605830400000, length=715, md5=9f3a3069261598f74220bc47958ec252
+
+2021-04-21 11:45:54,110 INFO [dump-all-ok] rufeng-system-dev.yml+DEFAULT_GROUP, 1609396122000, length=747, md5=97427620b927a77f802afdc20bb2cd05
+
+2021-04-21 11:45:54,110 INFO [dump-all-ok] rufeng-auth-dev.yml+DEFAULT_GROUP, 1606376486000, length=340, md5=8da39275732db86e439daa64c44af890
+
+2021-04-21 11:45:54,111 INFO [dump-all-ok] rufeng-gateway-dev.yml+DEFAULT_GROUP, 1609403412000, length=646, md5=49a8c8781e9aa0c30b70caa102a5ba57
+

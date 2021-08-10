@@ -1,0 +1,20 @@
+2020-12-31 12:51:30,483 INFO [dump-all-ok] application-dev.yml+DEFAULT_GROUP, 1598951670000, length=491, md5=57470c6d167154919418fa150863b7fb
+
+2020-12-31 12:51:30,485 INFO [dump-all-ok] sentinel-ruoyi-gateway+DEFAULT_GROUP, 1605830400000, length=715, md5=9f3a3069261598f74220bc47958ec252
+
+2020-12-31 12:51:30,486 INFO [dump-all-ok] rufeng-system-dev.yml+DEFAULT_GROUP, 1607839151000, length=501, md5=1b26ea91161c8ed0248f9b0dcde6c1a7
+
+2020-12-31 12:51:30,487 INFO [dump-all-ok] rufeng-auth-dev.yml+DEFAULT_GROUP, 1606376486000, length=340, md5=8da39275732db86e439daa64c44af890
+
+2020-12-31 12:51:30,487 INFO [dump-all-ok] rufeng-gateway-dev.yml+DEFAULT_GROUP, 1608116436000, length=664, md5=fa9390b89d4833c674d819adfe3f5a08
+
+2020-12-31 14:07:57,064 INFO [dump-all-ok] application-dev.yml+DEFAULT_GROUP, 1598951670000, length=491, md5=57470c6d167154919418fa150863b7fb
+
+2020-12-31 14:07:57,065 INFO [dump-all-ok] sentinel-ruoyi-gateway+DEFAULT_GROUP, 1605830400000, length=715, md5=9f3a3069261598f74220bc47958ec252
+
+2020-12-31 14:07:57,065 INFO [dump-all-ok] rufeng-system-dev.yml+DEFAULT_GROUP, 1607839151000, length=501, md5=1b26ea91161c8ed0248f9b0dcde6c1a7
+
+2020-12-31 14:07:57,066 INFO [dump-all-ok] rufeng-auth-dev.yml+DEFAULT_GROUP, 1606376486000, length=340, md5=8da39275732db86e439daa64c44af890
+
+2020-12-31 14:07:57,067 INFO [dump-all-ok] rufeng-gateway-dev.yml+DEFAULT_GROUP, 1608116436000, length=664, md5=fa9390b89d4833c674d819adfe3f5a08
+

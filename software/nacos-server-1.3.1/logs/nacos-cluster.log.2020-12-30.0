@@ -1,0 +1,10 @@
+2020-12-30 17:19:11,950 INFO Current addressing mode selection : StandaloneMemberLookup
+
+2020-12-30 17:19:11,957 WARN [serverlist] updated to : [Member{ip='192.168.1.8', port=8848, state=UP, extendInfo={adWeight=0, raftPort=7848, site=unknow, weight=1}}]
+
+2020-12-30 17:19:48,519 INFO Current addressing mode selection : StandaloneMemberLookup
+
+2020-12-30 17:19:48,523 WARN [serverlist] updated to : [Member{ip='192.168.1.8', port=8848, state=UP, extendInfo={adWeight=0, raftPort=7848, site=unknow, weight=1}}]
+
+2020-12-30 17:19:53,289 INFO This node is ready to provide external services
+

@@ -1,0 +1,49 @@
+2021-07-24 11:21:18,652 INFO DEFAULT_GROUP@@rufeng-gateway is changed, add it to push queue.
+
+2021-07-24 11:21:18,702 INFO serviceName: DEFAULT_GROUP@@rufeng-gateway changed, schedule push for: 192.168.1.114:50171, agent: Nacos-Java-Client:v1.3.3, key: 192.168.1.114,50171,48691600478700
+
+2021-07-24 11:21:18,702 INFO send udp packet: 192.168.1.114,50171,48691600478700
+
+2021-07-24 11:21:18,727 INFO received ack: {"type": "push-ack", "lastRefTime":"48691600478700", "data":""} from: 192.168.1.114:50171, cost: 25 ms, unacked: 0, total push: 1
+
+2021-07-24 11:29:16,751 INFO DEFAULT_GROUP@@rufeng-auth is changed, add it to push queue.
+
+2021-07-24 11:29:16,753 INFO serviceName: DEFAULT_GROUP@@rufeng-auth changed, schedule push for: 192.168.1.114:57568, agent: Nacos-Java-Client:v1.3.3, key: 192.168.1.114,57568,49169664757100
+
+2021-07-24 11:29:16,754 INFO send udp packet: 192.168.1.114,57568,49169664757100
+
+2021-07-24 11:29:16,759 INFO received ack: {"type": "push-ack", "lastRefTime":"49169664757100", "data":""} from: 192.168.1.114:57568, cost: 5 ms, unacked: 0, total push: 2
+
+2021-07-24 11:29:45,954 INFO DEFAULT_GROUP@@rufeng-system is changed, add it to push queue.
+
+2021-07-24 11:29:45,954 INFO serviceName: DEFAULT_GROUP@@rufeng-system changed, schedule push for: 192.168.1.114:57569, agent: Nacos-Java-Client:v1.3.3, key: 192.168.1.114,57569,49198865984600
+
+2021-07-24 11:29:45,954 INFO send udp packet: 192.168.1.114,57569,49198865984600
+
+2021-07-24 11:29:45,958 INFO received ack: {"type": "push-ack", "lastRefTime":"49198865984600", "data":""} from: 192.168.1.114:57569, cost: 4 ms, unacked: 0, total push: 3
+
+2021-07-24 11:42:55,529 INFO DEFAULT_GROUP@@rufeng-gen is changed, add it to push queue.
+
+2021-07-24 11:42:55,530 INFO serviceName: DEFAULT_GROUP@@rufeng-gen changed, schedule push for: 192.168.1.114:60888, agent: Nacos-Java-Client:v1.3.3, key: 192.168.1.114,60888,49988441937300
+
+2021-07-24 11:42:55,530 INFO send udp packet: 192.168.1.114,60888,49988441937300
+
+2021-07-24 11:42:55,534 INFO received ack: {"type": "push-ack", "lastRefTime":"49988441937300", "data":""} from: 192.168.1.114:60888, cost: 4 ms, unacked: 0, total push: 4
+
+2021-07-24 11:45:02,292 INFO DEFAULT_GROUP@@rufeng-gateway is changed, add it to push queue.
+
+2021-07-24 11:45:02,292 INFO serviceName: DEFAULT_GROUP@@rufeng-gateway changed, schedule push for: 192.168.1.114:58677, agent: Nacos-Java-Client:v1.3.3, key: 192.168.1.114,58677,50115204406800
+
+2021-07-24 11:45:02,293 INFO send udp packet: 192.168.1.114,58677,50115204406800
+
+2021-07-24 11:45:02,293 INFO serviceName: DEFAULT_GROUP@@rufeng-gateway changed, schedule push for: 192.168.1.114:58677, agent: Nacos-Java-Client:v1.3.3, key: 192.168.1.114,58677,50115204406800
+
+2021-07-24 11:45:02,293 INFO send udp packet: 192.168.1.114,58677,50115204406800
+
+2021-07-24 11:45:02,296 INFO received ack: {"type": "push-ack", "lastRefTime":"50115204406800", "data":""} from: 192.168.1.114:58677, cost: 3 ms, unacked: 0, total push: 5
+
+2021-07-24 11:45:02,298 ERROR [NACOS-PUSH] error while receiving ack data
+
+java.lang.IllegalStateException: unable to find ackEntry for key: 192.168.1.114,58677,50115204406800, ack json: {"type": "push-ack", "lastRefTime":"50115204406800", "data":""}
+	at com.alibaba.nacos.naming.push.PushService$Receiver.run(PushService.java:677)
+	at java.lang.Thread.run(Thread.java:748)

@@ -1,0 +1,16 @@
+2021-03-19 19:06:49,216|192.168.10.1|application-dev.yml|DEFAULT_GROUP|null|unknown|1598951670000|pull|ok|17200339200|127.0.0.1
+2021-03-19 19:06:49,247|192.168.10.1|rufeng-gateway|DEFAULT_GROUP|null|unknown|-1|pull|not-found|-1|127.0.0.1
+2021-03-19 19:06:49,263|192.168.10.1|rufeng-gateway.yml|DEFAULT_GROUP|null|unknown|-1|pull|not-found|-1|127.0.0.1
+2021-03-19 19:06:49,279|192.168.10.1|rufeng-gateway-dev.yml|DEFAULT_GROUP|null|unknown|1609403412000|pull|ok|6748597279|127.0.0.1
+2021-03-19 19:08:04,076|192.168.10.1|application-dev.yml|DEFAULT_GROUP|null|unknown|1598951670000|pull|ok|17200414076|127.0.0.1
+2021-03-19 19:08:04,092|192.168.10.1|rufeng-auth|DEFAULT_GROUP|null|unknown|-1|pull|not-found|-1|127.0.0.1
+2021-03-19 19:08:04,112|192.168.10.1|rufeng-auth.yml|DEFAULT_GROUP|null|unknown|-1|pull|not-found|-1|127.0.0.1
+2021-03-19 19:08:04,151|192.168.10.1|rufeng-auth-dev.yml|DEFAULT_GROUP|null|unknown|1606376486000|pull|ok|9775598151|127.0.0.1
+2021-03-19 19:09:32,467|192.168.10.1|application-dev.yml|DEFAULT_GROUP|null|unknown|1598951670000|pull|ok|17200502467|127.0.0.1
+2021-03-19 19:09:32,483|192.168.10.1|rufeng-auth|DEFAULT_GROUP|null|unknown|-1|pull|not-found|-1|127.0.0.1
+2021-03-19 19:09:32,489|192.168.10.1|rufeng-auth.yml|DEFAULT_GROUP|null|unknown|-1|pull|not-found|-1|127.0.0.1
+2021-03-19 19:09:32,493|192.168.10.1|rufeng-auth-dev.yml|DEFAULT_GROUP|null|unknown|1606376486000|pull|ok|9775686493|127.0.0.1
+2021-03-19 19:10:43,029|192.168.10.1|application-dev.yml|DEFAULT_GROUP|null|unknown|1598951670000|pull|ok|17200573029|127.0.0.1
+2021-03-19 19:10:43,046|192.168.10.1|rufeng-auth|DEFAULT_GROUP|null|unknown|-1|pull|not-found|-1|127.0.0.1
+2021-03-19 19:10:43,050|192.168.10.1|rufeng-auth.yml|DEFAULT_GROUP|null|unknown|-1|pull|not-found|-1|127.0.0.1
+2021-03-19 19:10:43,068|192.168.10.1|rufeng-auth-dev.yml|DEFAULT_GROUP|null|unknown|1606376486000|pull|ok|9775757068|127.0.0.1

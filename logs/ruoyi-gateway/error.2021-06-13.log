@@ -1,0 +1,92 @@
+18:37:14.507 [reactor-http-nio-4] ERROR c.r.g.f.AuthFilter - [setUnauthorizedResponse,108] - [鉴权异常处理]请求路径:/system/online/list
+18:37:44.796 [reactor-http-nio-5] ERROR c.r.g.f.AuthFilter - [setUnauthorizedResponse,108] - [鉴权异常处理]请求路径:/system/user/list-by-page
+18:37:45.102 [reactor-http-nio-6] ERROR c.r.g.f.AuthFilter - [setUnauthorizedResponse,108] - [鉴权异常处理]请求路径:/system/dept/treeselect
+18:37:45.103 [reactor-http-nio-1] ERROR c.r.g.f.AuthFilter - [setUnauthorizedResponse,108] - [鉴权异常处理]请求路径:/system/config/configKey/sys.user.initPassword
+18:37:45.103 [reactor-http-nio-8] ERROR c.r.g.f.AuthFilter - [setUnauthorizedResponse,108] - [鉴权异常处理]请求路径:/system/dict/type/sys_user_sex
+18:37:45.104 [reactor-http-nio-7] ERROR c.r.g.f.AuthFilter - [setUnauthorizedResponse,108] - [鉴权异常处理]请求路径:/system/dict/type/sys_normal_disable
+18:38:14.875 [reactor-http-nio-3] ERROR c.r.g.f.AuthFilter - [setUnauthorizedResponse,108] - [鉴权异常处理]请求路径:/system/dict/type/sys_normal_disable
+18:38:14.876 [reactor-http-nio-2] ERROR c.r.g.f.AuthFilter - [setUnauthorizedResponse,108] - [鉴权异常处理]请求路径:/system/role/list-by-page
+18:42:24.121 [reactor-http-nio-4] ERROR c.r.g.f.AuthFilter - [setUnauthorizedResponse,108] - [鉴权异常处理]请求路径:/system/user/getInfo
+18:42:43.270 [reactor-http-nio-2] ERROR c.r.g.f.AuthFilter - [setUnauthorizedResponse,108] - [鉴权异常处理]请求路径:/system/online/list
+18:44:16.807 [reactor-http-nio-3] ERROR c.r.g.f.AuthFilter - [setUnauthorizedResponse,108] - [鉴权异常处理]请求路径:/system/user/list-by-page
+18:44:16.807 [reactor-http-nio-4] ERROR c.r.g.f.AuthFilter - [setUnauthorizedResponse,108] - [鉴权异常处理]请求路径:/system/dept/treeselect
+18:44:16.807 [reactor-http-nio-5] ERROR c.r.g.f.AuthFilter - [setUnauthorizedResponse,108] - [鉴权异常处理]请求路径:/system/dict/type/sys_normal_disable
+18:44:16.807 [reactor-http-nio-7] ERROR c.r.g.f.AuthFilter - [setUnauthorizedResponse,108] - [鉴权异常处理]请求路径:/system/config/configKey/sys.user.initPassword
+18:44:16.807 [reactor-http-nio-6] ERROR c.r.g.f.AuthFilter - [setUnauthorizedResponse,108] - [鉴权异常处理]请求路径:/system/dict/type/sys_user_sex
+18:44:44.707 [reactor-http-nio-8] ERROR c.r.g.f.AuthFilter - [setUnauthorizedResponse,108] - [鉴权异常处理]请求路径:/system/role/list-by-page
+18:44:45.013 [reactor-http-nio-1] ERROR c.r.g.f.AuthFilter - [setUnauthorizedResponse,108] - [鉴权异常处理]请求路径:/system/dict/type/sys_normal_disable
+18:46:15.027 [reactor-http-nio-2] ERROR c.r.g.f.AuthFilter - [setUnauthorizedResponse,108] - [鉴权异常处理]请求路径:/system/user/getInfo
+18:50:26.571 [reactor-http-nio-2] ERROR c.r.g.f.AuthFilter - [setUnauthorizedResponse,108] - [鉴权异常处理]请求路径:/system/online/list
+18:50:50.147 [reactor-http-nio-4] ERROR c.r.g.f.AuthFilter - [setUnauthorizedResponse,108] - [鉴权异常处理]请求路径:/system/dict/type/sys_normal_disable
+18:50:50.147 [reactor-http-nio-5] ERROR c.r.g.f.AuthFilter - [setUnauthorizedResponse,108] - [鉴权异常处理]请求路径:/system/dept/treeselect
+18:50:50.147 [reactor-http-nio-6] ERROR c.r.g.f.AuthFilter - [setUnauthorizedResponse,108] - [鉴权异常处理]请求路径:/system/dict/type/sys_user_sex
+18:50:56.257 [reactor-http-nio-7] ERROR c.r.g.f.AuthFilter - [setUnauthorizedResponse,108] - [鉴权异常处理]请求路径:/system/config/configKey/sys.user.initPassword
+18:51:39.268 [reactor-http-nio-3] ERROR c.r.g.f.AuthFilter - [setUnauthorizedResponse,108] - [鉴权异常处理]请求路径:/system/user/list-by-page
+18:51:40.042 [com.alibaba.nacos.client.naming.updater] ERROR c.a.n.client.naming - [callServer,613] - [NA] failed to request
+java.net.SocketTimeoutException: null
+	at java.net.SocksSocketImpl.remainingMillis(SocksSocketImpl.java:111)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:606)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1226)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1162)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1056)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:990)
+	at com.alibaba.nacos.common.http.client.request.JdkHttpClientRequest.execute(JdkHttpClientRequest.java:109)
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.execute(NacosRestTemplate.java:482)
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.exchangeForm(NacosRestTemplate.java:427)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:599)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:524)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:491)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:486)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.queryList(NamingProxy.java:400)
+	at com.alibaba.nacos.client.naming.core.HostReactor.updateService(HostReactor.java:339)
+	at com.alibaba.nacos.client.naming.core.HostReactor$UpdateTask.run(HostReactor.java:420)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+18:52:07.547 [reactor-http-nio-1] ERROR c.r.g.f.AuthFilter - [setUnauthorizedResponse,108] - [鉴权异常处理]请求路径:/system/dict/type/sys_normal_disable
+18:52:07.547 [reactor-http-nio-8] ERROR c.r.g.f.AuthFilter - [setUnauthorizedResponse,108] - [鉴权异常处理]请求路径:/system/dept/list
+19:04:17.243 [com.alibaba.nacos.naming.push.receiver] ERROR c.a.n.client.naming - [run,110] - [NA] error while receiving push data
+java.net.SocketException: socket closed
+	at java.net.DualStackPlainDatagramSocketImpl.socketReceiveOrPeekData(Native Method)
+	at java.net.DualStackPlainDatagramSocketImpl.receive0(DualStackPlainDatagramSocketImpl.java:124)
+	at java.net.AbstractPlainDatagramSocketImpl.receive(AbstractPlainDatagramSocketImpl.java:143)
+	at java.net.DatagramSocket.receive(DatagramSocket.java:812)
+	at com.alibaba.nacos.client.naming.core.PushReceiver.run(PushReceiver.java:83)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+19:05:39.357 [reactor-http-nio-2] ERROR c.r.g.f.AuthFilter - [setUnauthorizedResponse,108] - [鉴权异常处理]请求路径:/system/post/list-by-page
+19:05:39.357 [reactor-http-nio-3] ERROR c.r.g.f.AuthFilter - [setUnauthorizedResponse,108] - [鉴权异常处理]请求路径:/system/dict/type/sys_normal_disable
+19:06:33.026 [reactor-http-nio-6] ERROR c.r.g.f.AuthFilter - [setUnauthorizedResponse,108] - [鉴权异常处理]请求路径:/system/user/getInfo
+19:07:02.402 [com.alibaba.nacos.naming.push.receiver] ERROR c.a.n.client.naming - [run,110] - [NA] error while receiving push data
+java.net.SocketException: socket closed
+	at java.net.DualStackPlainDatagramSocketImpl.socketReceiveOrPeekData(Native Method)
+	at java.net.DualStackPlainDatagramSocketImpl.receive0(DualStackPlainDatagramSocketImpl.java:124)
+	at java.net.AbstractPlainDatagramSocketImpl.receive(AbstractPlainDatagramSocketImpl.java:143)
+	at java.net.DatagramSocket.receive(DatagramSocket.java:812)
+	at com.alibaba.nacos.client.naming.core.PushReceiver.run(PushReceiver.java:83)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)

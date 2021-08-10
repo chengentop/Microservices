@@ -1,0 +1,22 @@
+2021-07-31 18:09:00,279 ERROR [master-db] master db not found.
+
+2021-07-31 18:09:05,389 ERROR [db-error] master db 127.0.0.1 down.
+
+2021-07-31 18:09:07,310 WARN isQuickStart:false
+
+2021-07-31 18:09:07,341 ERROR Nacos Server did not start because dumpservice bean construction failure :
+java.lang.IllegalStateException: No DataSource set
+
+2021-07-31 18:09:36,216 ERROR [master-db] master db not found.
+
+2021-07-31 18:09:41,262 ERROR [db-error] master db 127.0.0.1 down.
+
+2021-07-31 18:09:42,668 WARN isQuickStart:false
+
+2021-07-31 18:09:42,684 ERROR Nacos Server did not start because dumpservice bean construction failure :
+java.lang.IllegalStateException: No DataSource set
+
+2021-07-31 18:10:16,831 WARN [master-db] jdbc:mysql://127.0.0.1:3306/nacos?characterEncoding=utf8&connectTimeout=1000&socketTimeout=3000&autoReconnect=true&useUnicode=true&useSSL=false&serverTimezone=UTC
+
+2021-07-31 18:10:18,284 WARN isQuickStart:false
+

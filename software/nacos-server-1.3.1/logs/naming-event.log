@@ -1,0 +1,12 @@
+2021-07-31 18:11:00,202 INFO DEFAULT_GROUP@@rufeng-gateway {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.1.105:9000:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-07-31 18:11:00,206 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@rufeng-gateway, ips: 192.168.1.105:9000_true,
+
+2021-07-31 18:11:32,778 INFO DEFAULT_GROUP@@rufeng-auth {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.1.105:9101:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-07-31 18:11:32,778 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@rufeng-auth, ips: 192.168.1.105:9101_true,
+
+2021-07-31 18:12:13,622 INFO DEFAULT_GROUP@@rufeng-system {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.1.105:9201:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-07-31 18:12:13,622 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@rufeng-system, ips: 192.168.1.105:9201_true,
+

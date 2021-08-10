@@ -1,0 +1,28 @@
+# Spring
+spring: 
+  redis:
+    host: localhost
+    port: 6379
+    password: 
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/rufeng_cloud?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8
+    username: root
+    password: 123456
+    dbtype: mysql
+    hikari:
+      # 最小连接数
+      minimum-idle: 5
+      # 空闲连接超时时间
+      idle-timeout: 180000
+      # 连接最大存活时间
+      max-lifetime: 520000
+      # 连接超时时间
+      connection-timeout: 30000
+      
+#mybaits-plus:
+mybatis-plus:
+  mapper-locations: classpath:mapper/*/*.xml
+  configuration:
+    map-underscore-to-camel-case: false
