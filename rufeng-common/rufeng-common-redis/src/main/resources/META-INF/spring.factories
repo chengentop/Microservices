@@ -1,3 +1,0 @@
-org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-  com.rufeng.common.redis.config.RedisConfig,\
-  com.rufeng.common.redis.service.RedisService

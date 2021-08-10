@@ -42,9 +42,9 @@
       <el-table-column label="登录地点" align="center" prop="loginlocation" :show-overflow-tooltip="true" />
       <el-table-column label="浏览器" align="center" prop="browser" />
       <el-table-column label="操作系统" align="center" prop="os" />
-      <el-table-column label="登录时间" align="center" prop="logintime" width="180">
+      <el-table-column label="登录时间" align="center" prop="loginTime" width="180">
         <template slot-scope="scope">
-          <span>{{ parseTime(scope.row.logintime) }}</span>
+          <span>{{ parseTime(scope.row.loginTime) }}</span>
         </template>
       </el-table-column>
       <el-table-column label="操作" align="center" class-name="small-padding fixed-width">

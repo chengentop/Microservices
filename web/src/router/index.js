@@ -92,7 +92,32 @@ export const constantRoutes = [
       }
     ]
   },
-
+  {
+    path: '/gen',
+    component: Layout,
+    hidden: true,
+    children: [
+      {
+        path: 'edit/:tableId(\\d+)',
+        component: (resolve) => require(['@/views/tool/gen/editTable'], resolve),
+        name: 'GenEdit',
+        meta: { title: '修改生成配置' }
+      }
+    ]
+  },
+  {
+    path: '/productCate',
+    component: Layout,
+    hidden: true,
+    children: [
+      {
+        path: 'add',
+        component: (resolve) => require(['@/views/pms/productCate/add'], resolve),
+        name: 'GenEdit',
+        meta: { title: '添加商品分类' }
+      }
+    ]
+  }
 ]
 
 export default new Router({

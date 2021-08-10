@@ -1,3 +1,0 @@
-org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-  com.rufeng.common.log.aspectj.LogAspect,\
-  com.rufeng.common.log.service.AsyncLogService

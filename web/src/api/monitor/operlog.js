@@ -3,7 +3,7 @@ import request from '@/utils/request'
 // 查询操作日志列表
 export function list(query) {
   return request({
-    url: '/system/sysoperlog/list-by-page',
+    url: '/system/operlog/list-by-page',
     method: 'get',
     params: query
   })
@@ -12,7 +12,7 @@ export function list(query) {
 // 删除操作日志
 export function delOperlog(operId) {
   return request({
-    url: '/system/sysoperlog/delete/' + operId,
+    url: '/system/operlog/delete/' + operId,
     method: 'delete'
   })
 }
@@ -20,7 +20,7 @@ export function delOperlog(operId) {
 // 清空操作日志
 export function cleanOperlog() {
   return request({
-    url: '/system/sysoperlog/clean',
+    url: '/system/operlog/clean',
     method: 'delete'
   })
 }
@@ -28,7 +28,7 @@ export function cleanOperlog() {
 // 导出操作日志
 export function exportOperlog(query) {
   return request({
-    url: '/system/sysoperlog/export',
+    url: '/system/operlog/export',
     method: 'get',
     params: query
   })

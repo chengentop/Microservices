@@ -217,10 +217,10 @@ export default {
   created() {
     this.getList();
     this.getDicts("sys_oper_type").then(response => {
-      this.typeOptions = response.data.dictDatas;
+      this.typeOptions = response.data;
     });
     this.getDicts("sys_common_status").then(response => {
-      this.statusOptions = response.data.dictDatas;
+      this.statusOptions = response.data;
     });
   },
   methods: {
@@ -228,8 +228,8 @@ export default {
     getList() {
       this.loading = true;
       list(this.addDateRange(this.queryParams, this.dateRange)).then( response => {
-          this.list = response.data.data.records;
-          this.total = response.data.data.total;
+          this.list = response.data.records;
+          this.total = response.data.total;
           this.loading = false;
         }
       );

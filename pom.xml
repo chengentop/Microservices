@@ -31,6 +31,10 @@
         <fastjson.version>1.2.74</fastjson.version>
         <poi.version>3.17</poi.version>
         <common-pool.version>2.6.2</common-pool.version>
+        <useragentutils.version>1.21</useragentutils.version>
+        <skywalking.version>8.3.0</skywalking.version>
+        <oshi.version>3.9.1</oshi.version>
+        <velocity.version>1.7</velocity.version>
     </properties>
 
     <!-- 依赖声明 -->
@@ -64,12 +68,6 @@
                 <scope>import</scope>
             </dependency>
 
-            <!--  SpringBoot 监控客户端 -->
-            <dependency>
-                <groupId>de.codecentric</groupId>
-                <artifactId>spring-boot-admin-starter-client</artifactId>
-                <version>${spring-boot-admin.version}</version>
-            </dependency>
 
             <dependency>
                 <groupId>com.baomidou</groupId>
@@ -138,51 +136,71 @@
                 <version>${common-pool.version}</version>
             </dependency>
 
+            <!-- UserAgentUtils -->
+            <dependency>
+                <groupId>eu.bitwalker</groupId>
+                <artifactId>UserAgentUtils</artifactId>
+                <version>${useragentutils.version}</version>
+            </dependency>
+            <!-- 获取系统信息 -->
+            <dependency>
+                <groupId>com.github.oshi</groupId>
+                <artifactId>oshi-core</artifactId>
+                <version>${oshi.version}</version>
+            </dependency>
+            <!--velocity代码生成使用模板 -->
+            <dependency>
+                <groupId>org.apache.velocity</groupId>
+                <artifactId>velocity</artifactId>
+                <version>${velocity.version}</version>
+            </dependency>
+
+
             <!-- 核心模块 -->
             <dependency>
                 <groupId>com.rufeng</groupId>
-                <artifactId>rufeng-common-core</artifactId>
+                <artifactId>common-core</artifactId>
                 <version>${rufeng.version}</version>
             </dependency>
 
             <!-- 安全模块 -->
             <dependency>
                 <groupId>com.rufeng</groupId>
-                <artifactId>rufeng-common-security</artifactId>
+                <artifactId>common-security</artifactId>
                 <version>${rufeng.version}</version>
             </dependency>
             <!-- 日志记录 -->
             <dependency>
                 <groupId>com.rufeng</groupId>
-                <artifactId>rufeng-common-log</artifactId>
+                <artifactId>common-log</artifactId>
                 <version>${rufeng.version}</version>
             </dependency>
 
             <!-- 缓存服务 -->
             <dependency>
                 <groupId>com.rufeng</groupId>
-                <artifactId>rufeng-common-redis</artifactId>
+                <artifactId>common-redis</artifactId>
                 <version>${rufeng.version}</version>
             </dependency>
             <!-- 系统接口 -->
             <dependency>
                 <groupId>com.rufeng</groupId>
-                <artifactId>rufeng-api-system</artifactId>
+                <artifactId>api-system</artifactId>
                 <version>${rufeng.version}</version>
             </dependency>
             <!-- 系统模块 -->
             <dependency>
                 <groupId>com.rufeng</groupId>
-                <artifactId>rufeng-api-system</artifactId>
+                <artifactId>api-system</artifactId>
                 <version>${rufeng.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
     <modules>
-        <module>rufeng-gateway</module>
-        <module>rufeng-common</module>
-        <module>rufeng-auth</module>
-        <module>rufeng-api</module>
-        <module>rufeng-modules</module>
+        <module>gateway</module>
+        <module>common</module>
+        <module>auth</module>
+        <module>api</module>
+        <module>modules</module>
     </modules>
 </project>

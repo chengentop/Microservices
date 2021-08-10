@@ -1,3 +1,0 @@
-org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-  com.rufeng.system.api.factory.RemoteLogFallbackFactory,\
-  com.rufeng.system.api.factory.RemoteUserFallbackFactory
